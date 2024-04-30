@@ -17,23 +17,16 @@ opacity: 1;
 #get-bill{
 font-weight: 1000;
 }
-#product-quntity,#get-bill,#product-name{
-opacity: 1;
-}
-#qr{
-height: 200px;
-width: 200px;
-opacity: 1;
-}
 
-/* #section_A>p,input ,#hide_procede_tp_payment_btn_1{
-height: 0px;
-} */
+
+
+
 
 #section_A{
 border: 2PX solid rgb(252, 45, 30);
 opacity: 1;
 padding: 10px;
+
 /* background-color: rgb(228, 162, 81); */
 /* background-color: rgb(215, 235, 177); */
 gap: 10px;
@@ -86,13 +79,15 @@ width: 20px;
 .button{
 height: 40px;
 width: 35vh;
-background-color: rgb(0, 0, 0);
+background-color:#5783db;
 color: rgb(255, 255, 255);
-border: 3px solid rgb(194, 147, 119);
+border: 3px solid rgb(0, 0, 0);
 padding: 2px;
-font-weight: 100;
+font-weight: 500;
 margin-top: 3px;
 font: bold;
+border-radius: 100PX;
+
 }
 
 .STAR{
@@ -155,15 +150,21 @@ width: 1px;
 background-color: brown;
 display: flex;
 } */
+BODY{
+    background-color: rgb(223, 229, 234);
+}
 #section_A>P{
 font-size: 15PX;
 }
 #addres_add,#product-quntity,#product-name{
 height: 30PX;
-background-color: rgb(198, 237, 237);
+background-color: rgb(220, 236, 217);
 margin-top: 2PX;
 margin-bottom: 2PX;
 border: 1 px solid black;
+font: bold;
+font-weight: 1000;
+color: rgb(255, 0, 0);
 }
 #product-name>option{
 border: 1px solid black;
@@ -188,6 +189,57 @@ align-items: center;
 justify-content: center;
 display: flex;
 }
+.paymentall{
+width: 100;
+display: flex;
+border: 1px solid;
+}
+/* .gp{
+        border-radius: 50%;
+       
+        border: 20px rgb(255, 18, 18);
+height: 70px;
+padding: 5px;
+text-align: center;
+justify-content: center;
+align-items: center;
+display: flex;
+} */
+.gpbtn{
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 3px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+margin: 10px;
+}
+.google_pay3{height: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+.gp{
+        height: 50px;
+        display: flex;
+        border-radius: 100%;
+        width: fit-content;
+        background-color: black;
+        padding: 1px;
+        text-align: center;
+justify-content: center;
+align-items: center;
+}
+.button2{
+  width: fit-content;
+    background-color: rgb(224, 224, 188);
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 3px;
+    border: 2px black;
+}
 </style>
 </head>
 <body id="body">
@@ -196,9 +248,10 @@ display: flex;
 <body>
 
 <div >
+    <div class="name"> सह्याद्री  कलेक्शन</div>
 <div  id="section_A">
   
-        <div class="name"> सह्याद्री  कलेक्शन</div>
+        
     
 <div class="main_hedding" id="section_A_h">-Personal Details-</div>
 <p>Name:- <input id="name" type="text"></p>
@@ -228,7 +281,11 @@ display: flex;
 
 <div id="section_B" >
 <div class="main_hedding" id="section_B_h"></div>
-<select  name="" id="product-name" onchange="alert(`${document.getElementById(`name`).value} you select  ${this.options[this.selectedIndex].text} is conform to proceed `)">
+<select  name="" id="product-name" 
+onchange="alert(`${document.getElementById(`name`).value} 
+you select  ${this.options[this.selectedIndex].text} 
+Please select quantity.
+and proceed to payment.`)">
 <option  value="00" >Select Product</option>
 
 <option value="8">Cotton design Rumal</option>
@@ -240,13 +297,15 @@ display: flex;
     <option value="79">4 to 5 Years</BR> girls dress</option>
 
     
+
+
 </select>
 
 <select name="" id="product-quntity">
     <option value="4">4  pieces</option>
-<option value="6">6  pieces</option>
-<option value="10">10  pieces</option>
-<option value="12">12  pieces</option>
+    <option value="6">6  pieces</option>
+    <option value="10">10  pieces</option>
+    <option value="12">12  pieces</option>
 </select>
 
 <button  class="button" id="hide_procede_tp_payment_btn" onclick="section_B()">Procede To Payment</button>
@@ -261,7 +320,23 @@ display: flex;
 
 </p>
 <div >
-<img id="qr"  src="qr.jpg"  alt="">
+<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
+
+<div class="paymentall">
+    <marquee
+    behavior="alternate"
+    id="marquee"
+    scrollamount = "7">
+    <div class="button2">------Payment App option-----</div>
+    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
+   
+   
+    </marquee>
+    
+
+</div>
 </div>
 
 <p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
@@ -376,7 +451,11 @@ document.getElementById("name").disabled = true;
 document.getElementById("address").disabled = true
 document.getElementById("addres_add").disabled = true;
 // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
+alert(`${name_of_custemer_a} 
+personal information save successfully;
+fill product information.`)
 sec_b.style.opacity = 1;
+sec_a.style.opacity = 0.3;
 };
 
 
@@ -396,13 +475,16 @@ function section_B(){
 
 
 
-sec_a.style.opacity = 0;
-sec_b.style.opacity = 0;
-sec_a.style.width= "0px";
-sec_b.style.width = "0px";
-sec_a.style.height= "0px";
-sec_b.style.height = "0px";
 
+sec_b.style.opacity = 0.3;
+// sec_a.style.width= "0px";
+// sec_b.style.width = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
+// sec_a.style.font= "0px";
+// sec_b.style.font = "0px";
+// sec_a.style.height= "0px";
+// sec_b.style.height = "0px";
 document.getElementById("product-name").disabled = true;
 
 
@@ -463,11 +545,15 @@ after payment note down the last 4 digits of UPI transaction id`)
 /* background-color: rgb(215, 235, 177); */
 setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = "rgb(228, 162, 81)"
+document.getElementById("colour_change").style.backgroundColor = "black"
+document.getElementById("colour_change").style.color = "white"
+
 }, 1000);
 setInterval(() => {
 
-document.getElementById("colour_change").style.backgroundColor = " rgb(215, 235, 177)"
+document.getElementById("colour_change").style.backgroundColor = "white"
+document.getElementById("colour_change").style.color = "black"
+
 }, 2000);
 
 document.getElementById("hide_procede_tp_payment_btn_1").disabled = true;
@@ -490,12 +576,19 @@ document.getElementById("product-quntity").disabled = true;
 // document.querySelector(".a11").classList.add("small");
 // document.querySelector(".a12").classList.add("small");
 // };
+document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
+
+
+
 setTimeout(() => {
-    alert(`${name_of_custemer} या QR कोड वर कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि लिहा.`)
+    alert(`${name_of_custemer}
+    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
+    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
 }, 2000);
 
-}
+} 
 
 
 
@@ -511,7 +604,7 @@ let name_of_custemer_a = document.getElementById("name").value;
 
 document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
 
-document.getElementById("qr").style.opacity = 1;
+// document.getElementById("qr").style.opacity = 1;
 
 selectElement = document.querySelector('#product-name');
 output1 = selectElement.value;
@@ -566,7 +659,7 @@ section_b()
 }else{
 // sec_a.style.height = "2px";
 // sec_b.style.height = "2px";
-sec_c.style.height = "2px";
+// sec_c.style.height = "2px";
 sec_c.style.opacity = 1;
 sec_d.style.opacity = 1;
 
