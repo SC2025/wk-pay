@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,23 @@ opacity: 1;
 font-weight: 1000;
 }
 
-
-
+#qr_div{
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+}
+#qr{
+    height: 40%;
+    width: 40%;
+    margin: 3px;
+    padding: 3px;
+    display: flex;
+    border: 2px solid black;
+}
 
 
 #section_A{
@@ -39,6 +55,7 @@ border: 2PX solid rgb(255, 0, 0);
 border: 2PX solid;
 opacity: 0;
 padding: 10px;
+height: 30%;
 
 gap: 50px;
 
@@ -68,7 +85,9 @@ padding: 5px;
 
 }
 
-#marquee
+.sec_d_p{
+    font-size: 13px;
+}
 
 option{
 padding: 5px;
@@ -101,6 +120,9 @@ padding: 4px;
 border: 2px solid black;
 color: rgb(0, 0, 0);
 }
+
+
+
 #qr_info_all_data{
 border: 2px solid black;
 padding: 5px;
@@ -172,7 +194,6 @@ border: 1px solid black;
 .main_hedding{
 display: flex;
 border: 0.1px solid black;
-
 align-items: center;
 justify-content: center;
 text-align: center;
@@ -240,6 +261,26 @@ align-items: center;
     padding: 3px;
     border: 2px black;
 }
+#first_para{
+    opacity: 0;
+    font-size: 0px;
+}
+.qrimgbottomhedding{
+    
+    background-color: rgb(236, 216, 216);
+    padding: 2PX;
+    border: 1px solid black;
+    border-radius: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+#bill{
+    width: fit-content;
+    font-size: 15px;
+}
 </style>
 </head>
 <body id="body">
@@ -249,23 +290,31 @@ align-items: center;
 
 <div >
     <div class="name"> सह्याद्री  कलेक्शन</div>
+    <div id="first_para">
+        <p id="op"></p>
+        <p id="on"></p>
+        
+         <div class="sec_d_element"> <p>Order ID :- </p><P id="oid"></P></div>
+         <p id="seven_day"></p>
+        
+    </div>
+ 
 <div  id="section_A">
   
-        
-    
 <div class="main_hedding" id="section_A_h">-Personal Details-</div>
-<p>Name:- <input id="name" type="text"></p>
+<p>नाव :- <input id="name" type="text"></p>
 
-<p  >Address:- <select   name=""  id="addres_add">
+<p  >गाव निवडा :- <select   name=""  id="addres_add">
 <option value="select city">select city</option>
 <option value="rahimatpur">Rahimatpur</option>
 <option value="boriv">Boriv</option>
 <option value="Naharwadi">Naharwadi</option>
+<option value="Other">Other</option>
 </select>
 
-<p >Full Address:- <input id="address" type="text"></p></p>
+<p >संपूर्ण पत्ता लिहा :- <input id="address" type="text"></p></p>
 <div>
-<button  id="hide_procede_tp_payment_btn_1"  class="button" onclick="section_A()">Submit personal information</button>
+<button  id="secA_btn"  class="button" onclick="secA()">Submit personal information</button>
 
 </div>
 
@@ -273,20 +322,16 @@ align-items: center;
 </div>
 
 </div>
-
-
-
-
 
 
 <div id="section_B" >
 <div class="main_hedding" id="section_B_h"></div>
 <select  name="" id="product-name" 
 onchange="alert(`${document.getElementById(`name`).value} 
-you select  ${this.options[this.selectedIndex].text} 
-Please select quantity.
-and proceed to payment.`)">
-<option  value="00" >Select Product</option>
+तुम्ही  ${this.options[this.selectedIndex].text} प्रोड्कट निवडा आहे.
+Please select quantity.`)">
+<option  value="00" >प्रोड्कट निवडा</option>
+
 
 <option value="8">Cotton design Rumal</option>
 <option value="15">Cotton Check Colour Rumal</option>
@@ -296,473 +341,478 @@ and proceed to payment.`)">
     <option value="18">Napkins </BR> Size 40 CM * 25 CM</option>
     <option value="79">4 to 5 Years</BR> girls dress</option>
 
-    
-
-
 </select>
 
 <select name="" id="product-quntity">
-    <option value="4">4  pieces</option>
+    <option id="a1" value="4">4  pieces</option>
     <option value="6">6  pieces</option>
+    <option value="8">8  pieces</option>
     <option value="10">10  pieces</option>
     <option value="12">12  pieces</option>
 </select>
 
-<button  class="button" id="hide_procede_tp_payment_btn" onclick="section_B()">Procede To Payment</button>
+<button  class="button" id="secB_btn" onclick="secB()">view order summary</summary></button>
+
+
+
 
 </div>
 
 <div  id="section_C">
-<div id="qr_info_all_data">
-<p id="qr_info" ></p>
-<p id="qr_info_2" ></p>
+
+    <div class="main_hedding" id="sec_c_heding"></div>
+    <h3><p id="order_id"></p></h3>
+<h3><p id="product_nane-print"></p></h3>
+<h3><p id="product_discount"></p></h3>
+<h3><p id="product_prise-print"></p></h3>
+<h3><p id="product_quantity-print"></p></h3>
+<h3><p class="qrimgbottomhedding" id="product_finalprise-print"></p></h3>
+
+<div>
+    <h3><p id="select_villege"></p></h3> 
+    <h3><p id="full_address"></p></h3>
+    <h3><p id="teansaction_id"></p></h3>
 </div>
 
-</p>
-<div >
-<!-- <img id="qr"  src="qr.jpg"  alt=""> -->
 
+<div>
+    <div id="qr_div">
+    <img id="qr"  src="qr.jpg"  alt="qr.img"> 
+</div>
 <div class="paymentall">
     <marquee
     behavior="alternate"
     id="marquee"
     scrollamount = "7">
-    <div class="button2">------Payment App option-----</div>
-    <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
+    <p id="bill" class="qrimgbottomhedding"></p>
+
+    <!-- <div class="button2">-Payment App options-</div> -->
+    <!-- <a id="google_pay2" href=""><button class="gpbtn"><img class="gp"   src="pp.png" alt="" ></button></a> 
     <a id="google_pay1" href=""><button class="gpbtn"><img  class="gp" src="gp.png" alt="" ></button></a> 
-    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a> 
-   
-   
+    <a id="google_pay3" href=""><button class="gpbtn"><img  class="gp"  src="ptm.png" alt="" ></button></a>  -->
     </marquee>
     
 
-</div>
+
+</div> 
+
+ <p  id="id_input" class="big_font">Enter UPI transactiion id last 4 digit
+    <input  id="transaction_id" value="" type="text">
+</p>
+<BUtton class="button"  onclick="secC()">preview And Submit Payment data </BUtton>
+</div> 
+
 </div>
 
-<p  id="colour_change" class="big_font">Enter UPI transactiion id last 4 digit<input  id="transaction_id" value="" type="text"></p>
-<BUtton class="button"  onclick="section_C()">preview And Submit Payment data </BUtton>
-</div>
+
+
+
+
+
+
+
 
 
 
 
 
 <div id="section_D">
-<p class="main_hedding" id="section_D_h"></p>
-<BR>
-<div class="sec_d_element"> <p>name of custemer :- </p><P id="name_of_custemer"></P></div>
-<BR>
-<div class="sec_d_element"> <p>Villege Name :- </p><P id="addres_add_se"></P></div>
-<br>
-<div class="sec_d_element"> <p>Address NEAR BY :- </p><P id="Address_NEAR_BY"></P></div>
-<BR>
-<div class="sec_d_element"> <p>product name :- </p><P id="product_name"></P></div>
-<BR>
-<div class="sec_d_element"> <p>get discount :- </p><P id="get_discount"></P></div>
-<BR>
-<div class="sec_d_element"> <p>product quantity :- </p><P id="product_quantity"></P></div>
-<BR>
-<div class="sec_d_element"> <p>one product_prise :- </p><P id="one_product_prise"></P></div>
-<BR>
-<div class="sec_d_element"> <p>total :- </p><P id="total_product_prize"></P></div>
-<BR>
-<div class="sec_d_element"><p>Order Date :- <p id="date"></p></p></div>
-<BR>
-<div class="sec_d_element"> <p>UPI transaction ID :- </p><P id="transaction_ID"></P></div>
-<BR>
-
-
-
-
-
-
-
-
-
+<p class="main_hedding" id="secD_heding"></p>
+<p class="sec_d_p" id ="all_sec_d_info"></p>
+<p class="sec_d_p" id="i1"></p>
+<p class="sec_d_p" id="i2"></p>
+<p class="sec_d_p"  id="i3"></p>
+<p class="sec_d_p"  id="i4"></p>
+<p class="sec_d_p"  id="i5"></p>
+<p class="sec_d_p"  id="i6"></p>
+<p class="sec_d_p"  id="i7"></p>
+<p class="sec_d_p"  id="i8"></p>
+<p class="sec_d_p"  id="i9"></p>
+<p class="sec_d_p"  id="i10"></p>
+<p class="sec_d_p"  id="i11"></p>
+<p class="sec_d_p" id="i12"></p>
 
 
 <marquee
 behavior="alternate"
 id="marquee"
 scrollamount = "4">
-<button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click submit @ whatsapp</button>
-
-</div>
+<button onclick="gotowhatsapp()"   class="button"  id="get-bill" >Click to final submit</button>
 </marquee>
+</div> 
+
 
 </div>
-
-
 
 
 
 <script>
+    //section a
+var secA_div = document.getElementById("section_A");
+var a = document.getElementById("op");
+var b = document.getElementById("on");
+var c = document.getElementById("oid");
+var c_c = document.getElementById("seven_day");
+var d = document.getElementById("name");
+var e = document.getElementById("addres_add");
 
 
+
+var f = document.getElementById("address");
+var f_one = document.getElementById("secA_btn");
+        
+//section b
+var g = document.getElementById("section_B");
+var h  = document.getElementById("section_B_h");
+var i  = document.getElementById("product-name");
+var j  = document.getElementById("product-quntity");
+var k  =  document.getElementById("secB_btn");
+
+//section c
+var l  = document.getElementById("section_C");
+var m  = document.getElementById("product_nane-print");
+var n  = document.getElementById("product_prise-print");
+var o  = document.getElementById("product_quantity-print");
+var p  = document.getElementById("product_discount");
+var q  = document.getElementById("product_finalprise-print");
+var r  = document.getElementById("sec_c_heding");
+var s  = document.getElementById("transaction_id");
+var s_one = document.getElementById("select_villege");
+var s_two = document.getElementById("full_address");
+// var s_one = document.getElementById("select_villege");
+
+  
+
+
+//sec d
+var t  = document.getElementById("section_D");
+var u  = document.getElementById("secD_heding");
+var v  = document.getElementById("order_id");
+var x  = document.getElementById("all_sec_d_info");
+var z = document.getElementById("i12")
+//section c
+
+
+
+//id print perr
+function ORDER_ID_PREE() {
+      myDate = new Date
+            var hours = myDate.getHours(); 
+            hours = hours % 12; 
+            hours = hours ? hours : 12; 
+            var minutes = myDate.getMinutes(); 
+            minutes = minutes < 10 ? '0' + minutes : minutes; 
+            var myTime = "SK" + hours + minutes + "-"
+            a.innerHTML = myTime
+    } ORDER_ID_PREE()
+    
+
+
+
+//id print next
+    function ORDER_ID_NEXT(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() );
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+    b.innerHTML = `${day}${month}${year}`;
+    
+    
+    } ;ORDER_ID_NEXT();
+    c.innerHTML = a.innerHTML + b.innerHTML;
+
+//delivered date 
+ function seven_days_after_date(){
+    
+    // Creating the date instance
+    let d = new Date();
+    
+    // Adding one date to the present date
+    d.setDate(d.getDate() + 7);
+    
+    let year = d.getFullYear()
+    let month = String(d.getMonth() + 1)
+    let day = String(d.getDate())
+    
+    // Adding leading 0 if the day or month
+    // is one digit value
+    month = month.length == 1 ?
+    month.padStart('2', '0') : month;
+    
+    day = day.length == 1 ?
+    day.padStart('2', '0') : day;
+    
+    // Printing the present date
+c_c.innerHTML = `${day}-${month}-${year}`;
+   }seven_days_after_date()
+
+
+
+
+
+
+
+
+
+
+   function secA(){
+     
+    if ( d.value == ``|| null) {
+    alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
+    d.style.backgroundColor = "red"
+    window.location.reload()
+    }
+    
+    else if(f.value == ``|| null)
+    {alert(`${d.value} please enter full address; without this information order is not confirmed `)
+    f.style.backgroundColor = "red"
+    window.location.reload()
+    }
+    
+    else if(
+    e.value == "select city" || ``|| null
+    ){alert(`${d.value} please select villege option; without this information order is not confirmed `)
+    document.getElementById("addres_add").style.backgroundColor = "black"
+    window.location.reload()
+    }
+    else if(
+    e.value == "Other" 
+    ){alert(`${d.value} तुम्ही Other हा पर्याय  निवडला आहे  
+    रहिमतपुर पासून 4 की.मी Free order delivery आहे ;
+
+    ${d.value} त्यामुळे रहिमतपुर मधील तुमच्या मित्राचा किंवा नातेवाईकाचा पत्ता द्या म्हणजे Free order delivery भेटेल.
+
+    जर तुमचा पत्ता  रहिमतपुर पासून 4 की.मी च्या आत असेल तर रहिमतपुर हा पर्याय  निवडा आणि खालील "Full detail Address:-" मध्ये पत्ता लिहा`)
+    document.getElementById("addres_add").style.backgroundColor = "black"
+    window.location.reload()
+    }
+
+    
+    else{
+d.disabled = true;
+    e.disabled = true
+    f.disabled = true;
+    f_one.disabled = true;
+    // alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
+    alert(`${d.value} 
+    तुमची Personal Details सेव्ह झाली आहे. 
+    तुमचा प्रोड्कट निवडा.`)
+    };
+    secA_div.style.opacity = 0.2;
+    g.style.opacity = 1;
+    h.innerHTML = `-- ${d.value} select product options --`
 
 
   
-let sec_a =document.getElementById("section_A");
-let sec_b =document.getElementById("section_B");
-let sec_c =document.getElementById("section_C");
-let sec_d =document.getElementById("section_D");
-let full_address = document.getElementById("address");
+
+   } 
 
 
 
 
 
-function section_A() {
+   function secB() {
+  
 
-let name_of_custemer_a = document.getElementById("name").value;
-// let name_of_custemer_a_2_9 = parseInt(document.getElementById("name").value);
-document.getElementById("section_B_h").innerHTML = `- ${name_of_custemer_a } select product -`;
+    if(
+    i.value == "00"){alert(`${d.value} please select  product options; without this information order is not confirmed`)
+    i.style.backgroundColor = "black"
+ 
+    }else{
+        i.disabled = true
+    j.disabled = true;
+    k.disabled = true;
+    g.style.opacity = 0.2;
+l.style.opacity = 1;
+alert(`${d.value} 
+तुमची प्रोड्कट ची महिती सेव्ह झाली आहे.`)
+    
+//select villege
+// var select_villege = document.querySelector('#addres_add');
+//  var option_villege_select = select_villege.value;
+//     document.getElementById("select_villege").innerHTML = option_villege_select;
+   
+//address
+// var full_address = f.innerHTML;
+// s_two.innerHTML = full_address;
+
+//alert payment page 
+setTimeout(() => {
+        alert(`${d.value}
+        तुमचा ऑर्डर ID :- ${c.innerHTML} आहे.
+        Product name :-${name_product_name}
+        product get discount* :- 20 %
+        
+        one ${name_product_name} ${name_product_name} prise :- ${productrs} RS
+        
+        Total ${product_quantity}  product prise ${prise} RS
+        
+        कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून ${prise} RS पेमेंट करा. 
+        पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
+        पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
+    }, 1000);
 
 
-// console.log(name_of_custemer_a_2_9 )
+// order id 
+v.innerHTML =  `Order ID :- ${c.innerHTML}`
+//select product 
+var select = i;
+    var name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+m.innerHTML = `Product name :-${name_product_name}`
 
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
+      // product rs
+      var  selectElement = i;
+ var productrs = selectElement.value;
+ n.innerHTML = `one ${name_product_name} prise :- ${productrs} RS`;
+
+    //product quantity
+    var selectElement = j;
+    var product_quantity = selectElement.value;
+    o.innerHTML = `product quantity :- ${product_quantity}`;
 
 
-if ( document.getElementById("name").value == ``|| null) {
-alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
-document.getElementById("name").style.backgroundColor = "red"
-window.location.reload()
+    //total prise of selected product
+    var prise =  productrs * product_quantity;
+   q.innerHTML = ` Total ${product_quantity} product prise prise ${prise} RS`;
+   p.innerHTML = `productget discount* :- 20 %`
+
+//    //transaction id
+//    var transaction_id = s.innerHTML;
+
+// l.style.opacity = 1;
+r.innerHTML = `${d.value} your order summary `
+
+//befor 7 day 
+var seven_z = document.getElementById("i12")
+//PAYMENT QR
+document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${prise} RS`;
+
+// document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+
+// PAYMENTAW   https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=onkarjha2003@sbi%26am=1500%26tn=
+// document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+// document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+// document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+// }
+   }
+
+
 }
 
-else if(document.getElementById("address").value == ``|| null)
-{alert(`${name_of_custemer_a} please enter full address; without this information order is not confirmed `)
-document.getElementById("address").style.backgroundColor = "red"
-window.location.reload()
-}
+   
 
-else if(
-document.getElementById("addres_add").value == "select city" || ``|| null
-){alert(`${name_of_custemer_a} please select villege option; without this information order is not confirmed `)
-document.getElementById("addres_add").style.backgroundColor = "red"
-window.location.reload()
-}
-
-else{
-document.getElementById("name").disabled = true;
-document.getElementById("address").disabled = true
-document.getElementById("addres_add").disabled = true;
-// alert( document.getElementById("name").value +" "+"Thank you" + " your name and addres is save ; please fill product details");
-alert(`${name_of_custemer_a} 
-personal information save successfully;
-fill product information.`)
-sec_b.style.opacity = 1;
-sec_a.style.opacity = 0.3;
-};
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-function section_B(){
-
-
-
-
-sec_b.style.opacity = 0.3;
-// sec_a.style.width= "0px";
-// sec_b.style.width = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-// sec_a.style.font= "0px";
-// sec_b.style.font = "0px";
-// sec_a.style.height= "0px";
-// sec_b.style.height = "0px";
-document.getElementById("product-name").disabled = true;
-
-
-let name_of_custemer = document.getElementById("name").value;
-let full_address = document.getElementById("address").value;
-
-
-selectElement = document.querySelector('#product-name');
-output1 = selectElement.value;
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-selectElement = document.querySelector('#product-quntity');
-output2 = selectElement.value;
-
-//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
-
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-
-// let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
-
-
-
-let transactionid = document.getElementById("transaction_id").value;
-
-
-
-
-document.getElementById("qr_info").innerHTML = `<h1> Product Payment summary </h1>
-<br>
-product name = ${name_product_name}
-<br>
-get product discount is = 20%
-<br>
-product quantity = ${output2}
-<br>
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS`;
-document.getElementById("qr_info_2").innerHTML =`<h2>total ${output2} product prise is = ${output1 * output2} RS</h2>`;
-
-sec_c.style.opacity = 1;
-
-alert(`${name_of_custemer}
-you order is = ${name_product_name}
-get discount is = 20%
-one ${name_product_name} prize is = ${ONE_PRODUCT_PRIZE} RS
-product quantity = ${output2}
-total ${output2} product prise is = ${output1 * output2} RS
-scan following QR code and  pay = ${output1 * output2} RS
-after payment note down the last 4 digits of UPI transaction id`)
-
-/* background-color: rgb(228, 162, 81); */
-/* background-color: rgb(215, 235, 177); */
-setInterval(() => {
-
-document.getElementById("colour_change").style.backgroundColor = "black"
-document.getElementById("colour_change").style.color = "white"
-
-}, 1000);
-setInterval(() => {
-
-document.getElementById("colour_change").style.backgroundColor = "white"
-document.getElementById("colour_change").style.color = "black"
-
-}, 2000);
-
-document.getElementById("hide_procede_tp_payment_btn_1").disabled = true;
-document.getElementById("hide_procede_tp_payment_btn").disabled = true;
-document.getElementById("product-quntity").disabled = true;
-
-
-
-
-// document.querySelector(".a1").classList.add("small");
-// document.querySelector(".a2").classList.add("small");
-// document.querySelector(".a3").classList.add("small");
-// document.querySelector(".a4").classList.add("small");
-// document.querySelector(".a5").classList.add("small");
-// document.querySelector(".a6").classList.add("small");
-// document.querySelector(".a7").classList.add("small");
-// document.querySelector(".a8").classList.add("small");
-// document.querySelector(".a9").classList.add("small");
-// document.querySelector(".a10").classList.add("small");
-// document.querySelector(".a11").classList.add("small");
-// document.querySelector(".a12").classList.add("small");
-// };
-document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-        document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici&pn=Sahyadri%20Collection&am="+output1 * output2+"&cu=INR&tn=Sahyadri_collection"
-
+function secC(){
+    //id if elese
+ if(s.value == "")
+ {
+    alert(`${d.value}Please enter UPI Transaction id ;
+    without this information Order is not confirmed.`);
+    s.style.backgroundColor = "red";
+    secB()
+  }else{
+   t.style.opacity = 1;
+   l.style.opacity = 0.2;
+  
+  document.getElementById("i1").innerHTML = `तुमचा ऑर्डर ID :- ${c.innerHTML} आहे`;
+  document.getElementById("i2").innerHTML = `name of custemer :- ${d.value}`;
+  document.getElementById("i3").innerHTML = `Villege Name :- ${e.value}`;
+  document.getElementById("i4").innerHTML = `Full Address :- ${f.value}`;
+  document.getElementById("i5").innerHTML = `${m.innerHTML}`;
+  document.getElementById("i6").innerHTML = `get discount :-  20 %`;
+  document.getElementById("i7").innerHTML = `${o.innerHTML}`;
+  document.getElementById("i8").innerHTML = `${n.innerHTML}`;
+  document.getElementById("i9").innerHTML = `${q.innerHTML}`;
+  document.getElementById("i10").innerHTML = `Order Date :- ${new Date}`;
+  //MISSING I12 ADDJEST
+  document.getElementById("i12").innerHTML = `order delivery before ${c_c.innerHTML}`;
+  document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
+document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
 
 
 setTimeout(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`)
-}, 2000);
+    alert(`${d.value} 
+    click to final submit या बटन ला क्लिक करा ;
+    तुम्हाला व्हाट्सअप वर ऑर्डर स्मरी भेटेल आणि ऑर्डर कन्फर्म होईल`
+);
+},1000);
 
-
-
-    setInterval(() => {
-    alert(`${name_of_custemer}
-    कोणत्याही पेमेंट अँप ने ${output1 * output2} RS पेमेंट करा. 
-    पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.`);
-
-}, 15000);
-
-} 
-
-
-
-
-
-
-
-
-
-
-function section_C(){
-let name_of_custemer_a = document.getElementById("name").value;
-
-document.getElementById("section_D_h").innerHTML = `- ${name_of_custemer_a} your order details -`;
-
-// document.getElementById("qr").style.opacity = 1;
-
-selectElement = document.querySelector('#product-name');
-output1 = selectElement.value;
-
-selectElement = document.querySelector('#product-quntity');
-output2 = selectElement.value;
-
-//   document.getElementById("final-bill").innerHTML = output1 * output2 ;
-let ONE_PRODUCT_PRIZE = output1 * output2 / output2;
-
-let select = document.getElementById("product-name");
-let name_product_name = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-
-let transactionid = document.getElementById("transaction_id").value;
-
-
-let name_of_custemer = document.getElementById("name").value;
-
-//  let selectADDRESS = document.getElementById("addres_add");
-// let addres_add = selectADDRESS.options[selectADDRESS.selectedIndex].text ; //returns the entire select with all the options
-
-
-se = document.querySelector('#addres_add');
-output3 = se.value;
-document.getElementById("addres_add_se").innerHTML = output3
-console.log(output3)
-
-document.getElementById("name_of_custemer").innerHTML = ` ${name_of_custemer} `;
-document.getElementById("addres_add").innerHTML = ` ${output3} `;
-document.getElementById("Address_NEAR_BY").innerHTML =` ${full_address.value}`;
-document.getElementById("product_name").innerHTML =` ${name_product_name} `;
-document.getElementById("product_quantity").innerHTML =` ${output2} `;
-document.getElementById("one_product_prise").innerHTML =` ${select.options[select.selectedIndex].text} prize is = ${ONE_PRODUCT_PRIZE} RS `;
-document.getElementById("get_discount").innerHTML =`20%`;
-document.getElementById("total_product_prize").innerHTML =`${output2} product prise is = ${output1 * output2} RS`;
-document.getElementById("transaction_ID").innerHTML =` XXXXX${transactionid} `;
-document.getElementById("date").innerHTML = ` ${new Date} `;
-
-
-document.getElementById("hide_procede_tp_payment_btn").style.opacity = 1;
-document.getElementById("hide_procede_tp_payment_btn_1").style.opacity = 1;
-// document.getElementById("hide_procede_tp_payment_btn_2").style.backgroundColor = "red";
-// document.getElementById("hide_procede_tp_payment_btn_2").style.color = "white";
-// document.getElementById("hide_procede_tp_payment_btn_2").style.border = "3px solid black";
-
-
-
-if ( document.getElementById("transaction_id").value == ``||null)
-{
-alert("Please enter UPI Transaction id ;without this information Order is not confirmed .")
-section_b()
-}else{
-// sec_a.style.height = "2px";
-// sec_b.style.height = "2px";
-// sec_c.style.height = "2px";
-sec_c.style.opacity = 1;
-sec_d.style.opacity = 1;
-
-
-
-
+secA_div.remove();
+g.remove();
+l.remove();
 
 
 }
-setInterval(() => {
-
-document.getElementById("get-bill").style.backgroundColor = "rgb(235, 69, 57)"
-}, 1000);
-setInterval(() => {
-document.getElementById("get-bill").style.backgroundColor = "rgb(84, 57, 235)"
-}, 2000);
-
-const elementA = document.getElementById("section_A");
-elementA.remove();
-const elementB = document.getElementById("section_B");
-elementB.remove();
-const elementC = document.getElementById("section_C");
-elementC.remove();
-};
-
-let tomorrow = () => {
-
-// Creating the date instance
-let d = new Date();
-
-// Adding one date to the present date
-d.setDate(d.getDate() + 7);
-
-let year = d.getFullYear()
-let month = String(d.getMonth() + 1)
-let day = String(d.getDate())
-
-// Adding leading 0 if the day or month
-// is one digit value
-month = month.length == 1 ?
-month.padStart('2', '0') : month;
-
-day = day.length == 1 ?
-day.padStart('2', '0') : day;
-
-// Printing the present date
-console.log(`${day}-${month}-${year}`);
+}
 
 
 
-} ;
 
-tomorrow()
 
 function gotowhatsapp(){
-let name_of_custemer = document.getElementById("name_of_custemer").innerHTML;
-let addres_add =  document.getElementById("addres_add_se").innerHTML;
+    var b1 =  document.getElementById("i1").innerHTML;
+ var b2 =  document.getElementById("i2").innerHTML ;
+ var b3 =   document.getElementById("i3").innerHTML ;
+ var b4 =  document.getElementById("i4").innerHTML ;
+ var b5 =  document.getElementById("i5").innerHTML ;
+ var b6 =  document.getElementById("i6").innerHTML ;
+ var b7 =  document.getElementById("i7").innerHTML ;
+ var b8 =  document.getElementById("i8").innerHTML ;
+ var b9 =  document.getElementById("i9").innerHTML ;
+ var b10 =  document.getElementById("i10").innerHTML ;
+ var b11 =  document.getElementById("i11").innerHTML ;
+ var b12 =  document.getElementById("i12").innerHTML ;
 
-let Address_NEAR_BY =  document.getElementById("Address_NEAR_BY").innerHTML;
-let product_name = document.getElementById("product_name").innerHTML ;
-let product_quantity = document.getElementById("product_quantity").innerHTML ;
-let one_product_prise =document.getElementById("one_product_prise").innerHTML ;
-let get_discount = document.getElementById("get_discount").innerHTML ;
-let total_product_prize  = document.getElementById("total_product_prize").innerHTML ;
-let transaction_ID = document.getElementById("transaction_ID").innerHTML;
+if (b2 === "" || b3 === ""||b4 === "") {
+    alert("please save again -Personal Details-")
+} else if(b5 === "" || b6 === ""||b7 === ""||b8 === ""||b9 === ""){
+    alert(b2+"-please save again product options -")
+}else if(b11 === "please enter again Transaction id "){
+    alert(b2+"-please enter -")
+}else{
 
-
-
-
-
-
-var url = "https://wa.me/919834926132?text="
-+ "custemer name :-" + name_of_custemer +  "%0a" + "%0a"
-+"Name of villege :-" + " " + addres_add +  "%0a" + "%0a"
-+  "address:- " + Address_NEAR_BY + "%0a" + "%0a"
-+ "product name:- " + product_name + "%0a" + "%0a"
-+ "product quantity:- " + product_quantity + "%0a" + "%0a"
-+ "ONE"+ one_product_prise + "%0a" + "%0a"
-+ "get discount:- " + `20%` + "%0a" + "%0a"
-+  "TOTAL"  +  total_product_prize  +  "%0a" + "%0a"
-+"date = "+ " " + new Date +  "%0a"  + "order delivery :- within 6 Days"+ "%0a"+ "%0a"
-+"UPI Transaction id = "+ " " + transaction_ID +  "%0a" + "%0a"
-
-
-window.open(url, '_blank').focus();
+    var url = "https://wa.me/919834926132?text="
+    + "ORDER CONFIRM" + "%0a"
+    + b1 + "%0a" + "%0a"
+    +b2 + "%0a" + "%0a"
+    +b3 + "%0a" + "%0a"
+    + b4+ "%0a" + "%0a"
+    +b5 + "%0a" + "%0a"
+    + b6+ "%0a" + "%0a"
+    +b7 + "%0a" + "%0a"
+    +b8 + "%0a" + "%0a"
+    + b9+ "%0a" + "%0a"
+    + b10+ "%0a" + "%0a"
+     + b12 + "%0a" + "%0a"
+     + b11+ "%0a" + "%0a"
+     + "SEND SMS" 
+    window.open(url, '_blank').focus();
 }
+ 
+   
+    }
 
-
-
-
-
-
-
-
+   
 </script>
+
+
+
+
+
 </body>
 </html>
