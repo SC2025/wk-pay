@@ -364,9 +364,9 @@ Please select quantity.`)">
     <h3><p id="order_id"></p></h3>
 <h3><p id="product_nane-print"></p></h3>
 <h3><p id="product_discount"></p></h3>
-<h3><p id="product_prise-print"></p></h3>
+<h3><p id="product_price-print"></p></h3>
 <h3><p id="product_quantity-print"></p></h3>
-<h3><p class="qrimgbottomhedding" id="product_finalprise-print"></p></h3>
+<h3><p class="qrimgbottomhedding" id="product_finalprice-print"></p></h3>
 
 <div>
     <h3><p id="select_villege"></p></h3> 
@@ -471,10 +471,10 @@ var k  =  document.getElementById("secB_btn");
 //section c
 var l  = document.getElementById("section_C");
 var m  = document.getElementById("product_nane-print");
-var n  = document.getElementById("product_prise-print");
+var n  = document.getElementById("product_price-print");
 var o  = document.getElementById("product_quantity-print");
 var p  = document.getElementById("product_discount");
-var q  = document.getElementById("product_finalprise-print");
+var q  = document.getElementById("product_finalprice-print");
 var r  = document.getElementById("sec_c_heding");
 var s  = document.getElementById("transaction_id");
 var s_one = document.getElementById("select_villege");
@@ -659,11 +659,11 @@ setTimeout(() => {
         Product name :-${name_product_name}
         product get discount* :- 20 %
         
-        one ${name_product_name} ${name_product_name} prise :- ${productrs} RS
+        one ${name_product_name} ${name_product_name} price :- ${productrs} RS
         
-        Total ${product_quantity}  product prise ${prise} RS
+        Total ${product_quantity}  product price ${price} RS
         
-        कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून ${prise} RS पेमेंट करा. 
+        कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून ${price} RS पेमेंट करा. 
         पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
         पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
     }, 1000);
@@ -679,7 +679,7 @@ m.innerHTML = `Product name :-${name_product_name}`
       // product rs
       var  selectElement = i;
  var productrs = selectElement.value;
- n.innerHTML = `one ${name_product_name} prise :- ${productrs} RS`;
+ n.innerHTML = `one ${name_product_name} price :- ${productrs} RS`;
 
     //product quantity
     var selectElement = j;
@@ -687,9 +687,9 @@ m.innerHTML = `Product name :-${name_product_name}`
     o.innerHTML = `product quantity :- ${product_quantity}`;
 
 
-    //total prise of selected product
-    var prise =  productrs * product_quantity;
-   q.innerHTML = ` Total ${product_quantity} product prise prise ${prise} RS`;
+    //total price of selected product
+    var price =  productrs * product_quantity;
+   q.innerHTML = ` Total ${product_quantity} product price ${price} RS`;
    p.innerHTML = `productget discount* :- 20 %`
 
 //    //transaction id
@@ -701,14 +701,14 @@ r.innerHTML = `${d.value} your order summary `
 //befor 7 day 
 var seven_z = document.getElementById("i12")
 //PAYMENT QR
-document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${prise} RS`;
+document.getElementById("bill").innerHTML =  `${d.value} scan QR code and payment ${price} RS`;
 
-// document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+// document.getElementById("qr").src = "https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
 
 // PAYMENTAW   https://api.qrserver.com/v1/create-qr-code/?data=upi://pay?pa=onkarjha2003@sbi%26am=1500%26tn=
-// document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-// document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
-// document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+prise+"%26tn=" 
+// document.getElementById("google_pay1").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+// document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
+// document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
 // }
    }
 
@@ -730,7 +730,7 @@ function secC(){
    l.style.opacity = 0.2;
   
   document.getElementById("i1").innerHTML = `तुमचा ऑर्डर ID :- ${c.innerHTML} आहे`;
-  document.getElementById("i2").innerHTML = `name of custemer :- ${d.value}`;
+  document.getElementById("i2").innerHTML = `name of customer :- ${d.value}`;
   document.getElementById("i3").innerHTML = `Villege Name :- ${e.value}`;
   document.getElementById("i4").innerHTML = `Full Address :- ${f.value}`;
   document.getElementById("i5").innerHTML = `${m.innerHTML}`;
