@@ -53,7 +53,7 @@ font-weight: 1000;
 #section_B{
 border: 2PX solid rgb(255, 0, 0);
 border: 2PX solid;
-opacity: 0;
+opacity: 1;
 padding: 10px;
 height: 30%;
 
@@ -64,7 +64,7 @@ font-weight: 1000;
 }
 #section_C{
 border: 2PX solid rgb(255, 0, 0);
-opacity: 0;
+opacity: 1;
 padding: 10px;
 
 gap: 10px;
@@ -74,7 +74,7 @@ font-weight: 1000;
 }
 #section_D{
 border: 2PX solid red;
-opacity: 0;
+opacity: 1;
 padding: 10px;
 gap: 10px;
 font-size: 20px;
@@ -239,15 +239,33 @@ margin: 10px;
 #leg_hed , #leg_col{
 padding: 6px ;
 }
+
+
+#col_btn>button{
+    font: inherit;
+    height: fit-content;
+    width: 40%;
+    font-size: medium;
+    padding: 3%;
+    border-radius: 10%;
+    margin: 1%;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+#Other{
+    border-radius: 50%;
+}
 #leg_par{
     padding: 10 px;
     font-size: 15px;
-    height: 6%;
-    color: rgb(255, 255, 255);
+    width: fit-content;
+    height: fit-content;
+    color: rgb(0, 0, 0);
     border: 1px solid black;
-    background-color: #e83838;
+    background-color: #ffffff;
     display: flex;
-    opacity: 0;
+    opacity: 1;
 }
 .google_pay3{height: 2px;
         display: flex;
@@ -275,7 +293,7 @@ align-items: center;
     border: 2px black;
 }
 #first_para{
-    opacity: 0;
+    opacity: 1;
     font-size: 0px;
 }
 .qrimgbottomhedding{
@@ -295,42 +313,42 @@ align-items: center;
     font-size: 15px;
 }
 
-.black{
+#black{
     color: aliceblue;
     background-color: black;
   
 }
-.white{
+#white{
     background-color: rgb(255, 255, 255);
 }
-.red{
+#red{
     background-color: rgb(239, 91, 91);
 }
-.d_red{
+#d_red{
     background-color: rgb(255, 4, 4);
 }
-.pink{
+#pink{
     background-color: 	#FFB6C1;
 }
-.d_pink{
+#d_pink{
     background-color:	#eb9ca9;
 }
-.blue{
+#blue{
     background-color: rgb(109, 77, 168);
 }
-.d_blue{
+#d_blue{
     background-color: rgb(55, 0, 255);
 }
-.cream{
+#cream{
     background-color: #f1f0cd;
 }
-.d_cream{
+#d_cream{
     background-color: #dfdb94;
 }
-.sky{
-    background-color: rgb(110, 202, 232);
+#sky{
+   background-color: rgb(110, 202, 232);
 }
-.d_sky{
+#d_sky{
     background-color: rgb(10, 127, 186);
 }
 </style>
@@ -418,27 +436,26 @@ Please select quantity.`)">
 <h3><p id="product_nane-print"></p></h3>
 
 <div id="leg_par">
-    <div id="leg_hed"></div>
-    <div>
-<select name="" id="leg_col">
-    <option class="" value="">options</option>
-    <option class="black" value="">black</option>
-    <option class="white" value="">white</option>
-    <option class="red"  value="">red</option>
-    <option class="d_red"  value="">dark red</option>
-    <option class="pink"  value="">pink</option>
-    <option class="d_pink"  value="">dark pink</option>
-    <option class="blue"  value="">blue</option>
-    <option class="d_blue"  value="">dark blue</option>
-    <option class="cream"  value="">cream colour</option>
-    <option class="d_cream"  value="">dark cream clour</option>
-    <option class="sky"  value="">sky blue</option>
-    <option class="d_sky"  value="">dark sky blue</option>
-    <option class="Other"  value="">Other</option>
-
-</select>
+    
+    <div id="col_btn">
+        <div id="leg_hed"></div>
+        <button id="black" value="">colour :- black</button>
+        <button id="white" value="">colour :- white</button>
+        <button id="red"  value="">colour :- red</button>
+        <button id="d_red"  value="">colour :- dark red</button>
+        <button id="pink"  value="">colour  :- pink</button>
+        <button id="d_pink"  value="">colour  :- dark pink</button>
+        <button id="blue"  value="">colour  :- blue</button>
+        <button id="d_blue"  value="">colour  :- dark blue</button>
+        <button id="cream"  value="">colour  :- cream colour</button>
+        <button id="d_cream"  value="">colour  :- dark cream clour</button>
+        <button id="sky"  value="">colour  :- sky blue</button>
+        <button id="d_sky"  value="">colour  :- dark sky </button>
+        <button id="Other"  value="">colour  :- Other</button>
+    
 </div>
 </div>
+<p id="para"></p>
 
 <h3><p id="product_discount"></p></h3>
 <h3><p id="product_price-print"></p></h3>
@@ -500,9 +517,8 @@ Please select quantity.`)">
 <p class="sec_d_p" id="i2"></p>
 <p class="sec_d_p"  id="i3"></p>
 <p class="sec_d_p"  id="i4"></p>
-<p class="sec_d_p"  id="i5"></p>
+<p class="sec_d_p"  id="i5"><p class="sec_d_p" id="i14"></p></p>
 <p class="sec_d_p"  id="i6"></p>
-<p class="sec_d_p" id="i14"></p>
 <p class="sec_d_p"  id="i7"></p>
 <p class="sec_d_p"  id="i8"></p>
 <p class="sec_d_p"  id="i9"></p>
@@ -534,7 +550,7 @@ var c = document.getElementById("oid");
 var c_c = document.getElementById("seven_day");
 var d = document.getElementById("name");
 var e = document.getElementById("addres_add");
-var e1 = document.getElementById("leg_col");
+
 
 
 var f = document.getElementById("address");
@@ -789,7 +805,7 @@ document.getElementById("bill").innerHTML =  `${d.value} scan QR code and paymen
 // document.getElementById("google_pay2").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
 // document.getElementById("google_pay3").href =  "upi://pay?pa=aniruddhamane1000-3@okicici%26am="+price+"%26tn=" 
 // }
-document.getElementById("leg_hed").innerHTML = `${d.value} select colour`
+document.getElementById("leg_hed").innerHTML = `${d.value} select ${name_product_name} colour`
   //leggins colour;
 
 
@@ -807,8 +823,8 @@ if ( leg_par_opp  == "Petticoat" ) {
     document.getElementById("leg_par").style.opacity = 1;}
   
  else {
-    document.getElementById("leg_par").style.height = "0px";
-    i.disabled = true;
+    document.getElementById("leg_par").remove();
+   
 };  
 
 
@@ -859,7 +875,7 @@ function secC(){
   document.getElementById("i12").innerHTML = `order delivery before ${c_c.innerHTML}`;
   document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
 document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
-document.getElementById("i14").innerHTML = ` ${e1.innerHTML}`
+document.getElementById("i14").innerHTML = document.getElementById("para").innerHTML;
 
 setTimeout(() => {
     alert(`${d.value} 
@@ -873,23 +889,138 @@ g.remove();
 l.remove();
 
 
+
+
+
 //leggins_colour
-var select = e1;
-    var leggins_colour = select.options[select.selectedIndex].text ; //returns the entire select with all the options
-i14.innerHTML = `colour :-${leggins_colour}`
+// var select = e1;
+//     var leggins_colour = select.options[select.selectedIndex].text ; //returns the entire select with all the options
+// i14.innerHTML = `colour :- ${document.getElementById("para").innerHTML}`
 
 //LEGGINS COLOUR IF ELESE
-if (leggins_colour == "Other") {
-    alert(`${d.value}
-    tumhi other ha option select kela aahe jar tumhala dusara colour payje aasel tar aata pymenyt kara aamcya custemer care cha tya badal umhala call yeil
-    `)}else{console.log("ddd")} ;
-}
+// if (leggins_colour == "Other") {
+//     alert(`${d.value}
+//     tumhi other ha option select kela aahe jar tumhala dusara colour payje aasel tar aata pymenyt kara aamcya custemer care cha tya badal umhala call yeil
+//     `)}else{console.log("ddd")} ;
 
-}
+// }
+
+}}
+
+
+var blackcol =  document.getElementById("black");
+blackcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = blackcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select black colour` )
+  })
+
+
+  var whitecol =  document.getElementById("white");
+whitecol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = whitecol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select white colour` )
+  })
+
+
+  var redcol =  document.getElementById("red");
+redcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = redcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select red colour` )
+  })
+
+
+  var d_redcol =  document.getElementById("d_red");
+d_redcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = d_redcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select dark red colour` )
+  })
 
 
 
 
+
+
+  var pinkcol =  document.getElementById("pink");
+pinkcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = pinkcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select pink red colour` )
+  })
+
+
+
+
+
+
+
+
+  var d_pinkcol =  document.getElementById("d_pink");
+d_pinkcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = d_pinkcol.innerHTML;
+    document.getElementById("col_btn").remove();
+    alert(`${d.value} + you select dark pink colour` )
+  })
+
+
+  var bluecol =  document.getElementById("blue");
+bluecol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = bluecol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select blue colour` )
+  })
+
+
+  var d_bluecol =  document.getElementById("d_blue");
+d_bluecol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = d_bluecol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select dark blue colour` )
+  })
+
+
+
+  var creamcol =  document.getElementById("cream");
+creamcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = creamcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select cream colour` )
+  })
+
+
+
+  var d_creamcol =  document.getElementById("d_cream");
+d_creamcol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = d_creamcol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select dark crean colour` )
+  })
+
+
+  var skycol =  document.getElementById("sky");
+skycol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = skycol.innerHTML;
+    document.getElementById("col_btn").remove()
+    alert(`${d.value} + you select sky colour` )
+  })
+
+
+  var d_skycol =  document.getElementById("d_sky");
+d_skycol.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = d_skycol.innerHTML;
+    document.getElementById("col_btn").remove();
+    alert(`${d.value} + you select dark sky colour` )
+  })
+
+  var Other =  document.getElementById("Other");
+Other.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = Other.innerHTML;
+    document.getElementById("col_btn").remove();
+    alert(`${d.value} + c c y` )
+  })
 
 function gotowhatsapp(){
     var b1 =  document.getElementById("i1").innerHTML;
