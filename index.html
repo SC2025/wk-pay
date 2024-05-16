@@ -53,7 +53,7 @@ font-weight: 1000;
 #section_B{
 border: 2PX solid rgb(255, 0, 0);
 border: 2PX solid;
-opacity: 1;
+opacity: 0;
 padding: 10px;
 height: 30%;
 
@@ -64,7 +64,7 @@ font-weight: 1000;
 }
 #section_C{
 border: 2PX solid rgb(255, 0, 0);
-opacity: 1;
+opacity: 0;
 padding: 10px;
 
 gap: 10px;
@@ -74,7 +74,7 @@ font-weight: 1000;
 }
 #section_D{
 border: 2PX solid red;
-opacity: 1;
+opacity: 0;
 padding: 10px;
 gap: 10px;
 font-size: 20px;
@@ -265,7 +265,7 @@ padding: 6px ;
     border: 1px solid black;
     background-color: #ffffff;
     display: flex;
-    opacity: 1;
+    opacity: 0;
 }
 .google_pay3{height: 2px;
         display: flex;
@@ -293,7 +293,7 @@ align-items: center;
     border: 2px black;
 }
 #first_para{
-    opacity: 1;
+    opacity: 0;
     font-size: 0px;
 }
 .qrimgbottomhedding{
@@ -439,19 +439,19 @@ Please select quantity.`)">
     
     <div id="col_btn">
         <div id="leg_hed"></div>
-        <button id="black" value="">colour :- black</button>
-        <button id="white" value="">colour :- white</button>
-        <button id="red"  value="">colour :- red</button>
-        <button id="d_red"  value="">colour :- dark red</button>
-        <button id="pink"  value="">colour  :- pink</button>
-        <button id="d_pink"  value="">colour  :- dark pink</button>
-        <button id="blue"  value="">colour  :- blue</button>
-        <button id="d_blue"  value="">colour  :- dark blue</button>
-        <button id="cream"  value="">colour  :- cream colour</button>
-        <button id="d_cream"  value="">colour  :- dark cream clour</button>
-        <button id="sky"  value="">colour  :- sky blue</button>
-        <button id="d_sky"  value="">colour  :- dark sky </button>
-        <button id="Other"  value="">colour  :- Other</button>
+        <button id="black" value="">colour black</button>
+        <button id="white" value="">colour white</button>
+        <button id="red"  value="">colour red</button>
+        <button id="d_red"  value="">colour dark red</button>
+        <button id="pink"  value="">colour pink</button>
+        <button id="d_pink"  value="">colour dark pink</button>
+        <button id="blue"  value="">colour blue</button>
+        <button id="d_blue"  value="">colour dark bluE</button>
+        <button id="cream"  value="">colour cream colour</button>
+        <button id="d_cream"  value="">dark cream clour</button>
+        <button id="sky"  value="">colour sky blue</button>
+        <button id="d_sky"  value="">colour dark sky </button>
+        <button id="Other"  value="">colour Other</button>
     
 </div>
 </div>
@@ -761,7 +761,7 @@ setTimeout(() => {
         कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करून ${price} RS पेमेंट करा. 
         पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
         पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
-    }, 1000);
+    }, 10);
 
 
 // order id 
@@ -882,7 +882,7 @@ setTimeout(() => {
     click to final submit या बटन ला क्लिक करा ;
     तुम्हाला व्हाट्सअप वर ऑर्डर स्मरी भेटेल आणि ऑर्डर कन्फर्म होईल`
 );
-},1000);
+},100);
 
 secA_div.remove();
 g.remove();
