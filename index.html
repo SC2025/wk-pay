@@ -331,10 +331,10 @@ align-items: center;
     background-color: rgb(255, 4, 4);
 }
 #pink{
-    background-color: 	#FFB6C1;
+    background-color: 	#f4b9c1;
 }
 #d_pink{
-    background-color:	#eb9ca9;
+    background-color:	#c56071;
 }
 #blue{
     background-color: rgb(109, 77, 168);
@@ -354,6 +354,23 @@ align-items: center;
 #d_sky{
     background-color: rgb(10, 127, 186);
 }
+#yellow{background-color: yellow;}
+#marron{background-color: maroon;
+    color: #ffffff;}
+#green{background-color: rgba(63, 205, 38, 0.886);}
+#skin{background-color: #ffdbac}
+#navy_blue{background-color: navy;
+   color: #ffffff;}
+
+   #orange{background-color:	#FF8C00;}
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body id="body">
@@ -454,6 +471,17 @@ Please select quantity.`)">
         <button id="d_cream"  value="">dark cream clour</button>
         <button id="sky"  value="">colour sky blue</button>
         <button id="d_sky"  value="">colour dark sky </button>
+      
+
+        <button id="yellow"  value="">colour yellow </button>
+        <button id="marron"  value="">colour marron </button>
+        <button id="green"  value="">colour green</button>
+        <button id="skin"  value="">colour skin </button>
+        <button id="navy_blue"  value="">colour navy blue </button>
+        <button id="orange"  value="">Orange </button>
+
+
+
         <button id="Other"  value="">colour Other</button>
     
 </div>
@@ -956,7 +984,7 @@ d_redcol.addEventListener("click" ,function(){
 pinkcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = pinkcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} you select pink red colour
+    alert(`${d.value} you select pink colour
     QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
@@ -1018,7 +1046,7 @@ d_creamcol.addEventListener("click" ,function(){
 skycol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = skycol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} you select sky colour
+    alert(`${d.value} you select sky blue colour
     QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
@@ -1027,11 +1055,67 @@ skycol.addEventListener("click" ,function(){
 d_skycol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_skycol.innerHTML;
     document.getElementById("col_btn").remove();
-    alert(`${d.value} you select dark sky colour
+    alert(`${d.value} you select dark sky blue colour
     QR कोड स्कॅन करून पेमेंट करा.
     ` )
   })
 
+
+  var yellow =  document.getElementById("yellow");
+        yellow.addEventListener("click" ,function(){
+            document.getElementById("para").innerHTML = yellow.innerHTML;
+            document.getElementById("col_btn").remove();
+            alert(`${d.value} you select yellow colour
+            QR कोड स्कॅन करून पेमेंट करा.
+            ` )
+          })
+
+
+          var marron =  document.getElementById("marron");
+          marron.addEventListener("click" ,function(){
+              document.getElementById("para").innerHTML = marron.innerHTML;
+              document.getElementById("col_btn").remove();
+              alert(`${d.value} you select marron colour
+              QR कोड स्कॅन करून पेमेंट करा.
+              ` )
+            })
+
+            var green =  document.getElementById("green");
+            green.addEventListener("click" ,function(){
+                document.getElementById("para").innerHTML = green.innerHTML;
+                document.getElementById("col_btn").remove();
+                alert(`${d.value} you select green colour
+                QR कोड स्कॅन करून पेमेंट करा.
+                ` )
+              });
+
+              var skin =  document.getElementById("skin");
+              skin.addEventListener("click" ,function(){
+                  document.getElementById("para").innerHTML = skin.innerHTML;
+                  document.getElementById("col_btn").remove();
+                  alert(`${d.value} you select skin colour
+                  QR कोड स्कॅन करून पेमेंट करा.
+                  ` )
+                });
+
+                var navy_blue =  document.getElementById("navy_blue");
+                navy_blue.addEventListener("click" ,function(){
+                    document.getElementById("para").innerHTML = navy_blue.innerHTML;
+                    document.getElementById("col_btn").remove();
+                    alert(`${d.value} you select navy blue colour
+                    QR कोड स्कॅन करून पेमेंट करा.
+                    ` )
+                  })
+                 
+
+                 var Orange =  document.getElementById("orange");
+Orange.addEventListener("click" ,function(){
+    document.getElementById("para").innerHTML = Orange.innerHTML;
+    document.getElementById("col_btn").remove();
+    alert(`${d.value} you select Orange colour
+    QR कोड स्कॅन करून पेमेंट करा.
+    ` )
+  })
   var Other =  document.getElementById("Other");
 Other.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = Other.innerHTML;
