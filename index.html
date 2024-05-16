@@ -246,7 +246,7 @@ padding: 6px ;
     height: fit-content;
     width: 45%;
     font-size: small;
-    padding: 3%;
+    padding: 0.5%;
     border-radius: 10%;
     margin: 1%;
    justify-content: center;
@@ -758,7 +758,7 @@ setTimeout(() => {
         
         Total ${product_quantity}  product price ${price} RS
         
-        कोणत्याही पेमेंट अँप ने हा कोड स्कॅन करून ${price} RS पेमेंट करा. 
+        कोणत्याही पेमेंट अँप ने हा QR कोड स्कॅन करून ${price} RS पेमेंट करा. 
         पेमेंट झाल्यानंतर UPI Transaction id चे शेवटचे 4 डिजिट पहा आणि बॅक येऊन लिहा.
         पेमेंट झाले असेल तर फक्त UPI Transaction id लिहा`)
     }, 1000);
@@ -912,7 +912,8 @@ var blackcol =  document.getElementById("black");
 blackcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = blackcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select black colour` )
+    alert(`${d.value} you select black colour 
+    QR कोड स्कॅन करून पेमेंट करा. ` )
   })
 
 
@@ -920,7 +921,8 @@ blackcol.addEventListener("click" ,function(){
 whitecol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = whitecol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select white colour` )
+    alert(`${d.value} you select white colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -928,7 +930,8 @@ whitecol.addEventListener("click" ,function(){
 redcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = redcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select red colour` )
+    alert(`${d.value} you select red colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -936,7 +939,8 @@ redcol.addEventListener("click" ,function(){
 d_redcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_redcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select dark red colour` )
+    alert(`${d.value} you select dark red colour
+    QR कोड स्कॅन करून पेमेंट करा. ` )
   })
 
 
@@ -948,7 +952,8 @@ d_redcol.addEventListener("click" ,function(){
 pinkcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = pinkcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select pink red colour` )
+    alert(`${d.value} you select pink red colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -962,7 +967,8 @@ pinkcol.addEventListener("click" ,function(){
 d_pinkcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_pinkcol.innerHTML;
     document.getElementById("col_btn").remove();
-    alert(`${d.value} + you select dark pink colour` )
+    alert(`${d.value} you select dark pink colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -970,7 +976,8 @@ d_pinkcol.addEventListener("click" ,function(){
 bluecol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = bluecol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select blue colour` )
+    alert(`${d.value} you select blue colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -978,7 +985,8 @@ bluecol.addEventListener("click" ,function(){
 d_bluecol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_bluecol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select dark blue colour` )
+    alert(`${d.value} you select dark blue colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -987,7 +995,8 @@ d_bluecol.addEventListener("click" ,function(){
 creamcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = creamcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select cream colour` )
+    alert(`${d.value}  you select cream colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -996,7 +1005,8 @@ creamcol.addEventListener("click" ,function(){
 d_creamcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_creamcol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select dark crean colour` )
+    alert(`${d.value} you select dark crean colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -1004,7 +1014,8 @@ d_creamcol.addEventListener("click" ,function(){
 skycol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = skycol.innerHTML;
     document.getElementById("col_btn").remove()
-    alert(`${d.value} + you select sky colour` )
+    alert(`${d.value} you select sky colour
+    QR कोड स्कॅन करून पेमेंट करा.` )
   })
 
 
@@ -1012,7 +1023,9 @@ skycol.addEventListener("click" ,function(){
 d_skycol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_skycol.innerHTML;
     document.getElementById("col_btn").remove();
-    alert(`${d.value} + you select dark sky colour` )
+    alert(`${d.value} you select dark sky colour
+    QR कोड स्कॅन करून पेमेंट करा.
+    ` )
   })
 
   var Other =  document.getElementById("Other");
