@@ -242,8 +242,10 @@ justify-content: center;
 align-items: center;
 margin: 10px;
 }
-#leg_hed , #leg_col{
+#leg_hed {
 padding: 6px ;
+width: fit-content;
+border: 1px solid black;
 }
 
 
@@ -263,6 +265,8 @@ padding: 6px ;
 #Other{
     border-radius: 50%;
 }
+
+
 #leg_par{
     padding: 10 px;
     font-size: 15px;
@@ -271,7 +275,7 @@ padding: 6px ;
     color: rgb(0, 0, 0);
     border: 1px solid black;
     background-color: #ffffff;
-    display: flex;
+    /* display: flex; */
     opacity: 0;
 }
 .google_pay3{height: 2px;
@@ -465,9 +469,17 @@ Please select quantity.`)">
 <h3><p id="product_nane-print"></p></h3>
 
 <div id="leg_par">
-    
+
     <div id="col_btn">
+        
+        <marquee
+        behavior="alternate"
+    id="col marqee"
+        scrollamount = "3">
         <div id="leg_hed"></div>
+        </marquee>
+
+
         <button id="black" value="">colour black</button>
         <button id="white" value="">colour white</button>
         <button id="red"  value="">colour red</button>
