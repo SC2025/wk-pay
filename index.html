@@ -62,11 +62,14 @@ gap: 50px;
 font-size: 20px;
 font-weight: 1000;
 }
+
+
+
 #section_C{
 border: 2PX solid rgb(255, 0, 0);
 opacity: 0;
 padding: 10px;
-
+/* height: 1px; */
 gap: 10px;
 
 font-size: 10px;
@@ -245,6 +248,7 @@ padding: 6px ;
 
 
 #col_btn>button{
+
     font: inherit;
     height: fit-content;
     width: 45%;
@@ -319,6 +323,7 @@ align-items: center;
 #black{
     color: aliceblue;
     background-color: black;
+    
   
 }
 #white{
@@ -355,10 +360,14 @@ align-items: center;
     background-color: rgb(10, 127, 186);
 }
 #yellow{background-color: yellow;}
+
 #marron{background-color: maroon;
     color: #ffffff;}
-#green{background-color: rgba(63, 205, 38, 0.886);}
+
+#green{background-color: #2cbb2c;color: #ffffff;}
+
 #skin{background-color: #ffdbac}
+
 #navy_blue{background-color: navy;
    color: #ffffff;}
 
@@ -484,6 +493,7 @@ Please select quantity.`)">
 
         <button id="Other"  value="">colour Other</button>
     
+       
 </div>
 </div>
 <p id="para"></p>
@@ -850,10 +860,47 @@ var select = i;
 
 if ( leg_par_opp  == "Petticoat" ) {
     document.getElementById("leg_par").style.opacity = 1;
+    Orange.disabled = false;
+  navy_blue.disabled = false;
+                  skin.disabled = false;
+                green.disabled = false;
+              marron.disabled = false;
+            yellow.disabled = false;
+          d_skycol.disabled = false;
+  skycol.disabled = false;
+  d_creamcol.disabled = false;
+  creamcol.disabled = false;
+  d_bluecol.disabled = false;
+  bluecol.disabled = false;
+  d_pinkcol.disabled = false;
+  pinkcol.disabled = false;
+  d_redcol.disabled = false;
+  redcol.disabled = false;
+  whitecol.disabled = false;
+  blackcol.disabled = false;
+  Other.disabled = false;
   
 }else if ( leg_par_opp  == "leggeing" ) {
-    document.getElementById("leg_par").style.opacity = 1;}
-  
+    document.getElementById("leg_par").style.opacity = 1;
+    Orange.disabled = false;
+  navy_blue.disabled = false;
+                  skin.disabled = false;
+                green.disabled = false;
+              marron.disabled = false;
+            yellow.disabled = false;
+          d_skycol.disabled = false;
+  skycol.disabled = false;
+  d_creamcol.disabled = false;
+  creamcol.disabled = false;
+  d_bluecol.disabled = false;
+  bluecol.disabled = false;
+  d_pinkcol.disabled = false;
+  pinkcol.disabled = false;
+  d_redcol.disabled = false;
+  redcol.disabled = false;
+  whitecol.disabled = false;
+  blackcol.disabled = false;
+  Other.disabled = false;}
  else {
     document.getElementById("leg_par").remove();
    
@@ -967,6 +1014,7 @@ redcol.addEventListener("click" ,function(){
   })
 
 
+
   var d_redcol =  document.getElementById("d_red");
 d_redcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_redcol.innerHTML;
@@ -974,7 +1022,6 @@ d_redcol.addEventListener("click" ,function(){
     alert(`${d.value} you select dark red colour
     QR कोड स्कॅन करून पेमेंट करा. ` )
   })
-
 
 
 
@@ -994,7 +1041,6 @@ pinkcol.addEventListener("click" ,function(){
 
 
 
-
   var d_pinkcol =  document.getElementById("d_pink");
 d_pinkcol.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = d_pinkcol.innerHTML;
@@ -1002,6 +1048,9 @@ d_pinkcol.addEventListener("click" ,function(){
     alert(`${d.value} you select dark pink colour
     QR कोड स्कॅन करून पेमेंट करा.` )
   })
+
+
+
 
 
   var bluecol =  document.getElementById("blue");
@@ -1069,7 +1118,7 @@ d_skycol.addEventListener("click" ,function(){
             QR कोड स्कॅन करून पेमेंट करा.
             ` )
           })
-
+  
 
           var marron =  document.getElementById("marron");
           marron.addEventListener("click" ,function(){
@@ -1079,6 +1128,9 @@ d_skycol.addEventListener("click" ,function(){
               QR कोड स्कॅन करून पेमेंट करा.
               ` )
             })
+   
+
+
 
             var green =  document.getElementById("green");
             green.addEventListener("click" ,function(){
@@ -1088,6 +1140,10 @@ d_skycol.addEventListener("click" ,function(){
                 QR कोड स्कॅन करून पेमेंट करा.
                 ` )
               });
+         
+
+
+
 
               var skin =  document.getElementById("skin");
               skin.addEventListener("click" ,function(){
@@ -1097,6 +1153,9 @@ d_skycol.addEventListener("click" ,function(){
                   QR कोड स्कॅन करून पेमेंट करा.
                   ` )
                 });
+       
+
+
 
                 var navy_blue =  document.getElementById("navy_blue");
                 navy_blue.addEventListener("click" ,function(){
@@ -1106,7 +1165,12 @@ d_skycol.addEventListener("click" ,function(){
                     QR कोड स्कॅन करून पेमेंट करा.
                     ` )
                   })
-                 
+
+
+
+           
+
+
 
                  var Orange =  document.getElementById("orange");
 Orange.addEventListener("click" ,function(){
@@ -1115,13 +1179,48 @@ Orange.addEventListener("click" ,function(){
     alert(`${d.value} you select Orange colour
     QR कोड स्कॅन करून पेमेंट करा.
     ` )
-  })
+  });
+
+
+
+  
+
+
+
   var Other =  document.getElementById("Other");
 Other.addEventListener("click" ,function(){
     document.getElementById("para").innerHTML = Other.innerHTML;
     document.getElementById("col_btn").remove();
     alert(`${d.value} + c c y` )
   })
+
+
+
+
+
+
+
+  Orange.disabled = true;
+  navy_blue.disabled = true;
+                  skin.disabled = true;
+                green.disabled = true;
+              marron.disabled = true;
+            yellow.disabled = true;
+          d_skycol.disabled = true;
+  skycol.disabled = true;
+  d_creamcol.disabled = true;
+  creamcol.disabled = true;
+  d_bluecol.disabled = true;
+  bluecol.disabled = true;
+  d_pinkcol.disabled = true;
+  pinkcol.disabled = true;
+  d_redcol.disabled = true;
+  redcol.disabled = true;
+  whitecol.disabled = true;
+  blackcol.disabled = true;
+  Other.disabled = true;
+
+
 
 function gotowhatsapp(){
     var b1 =  document.getElementById("i1").innerHTML;
