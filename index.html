@@ -424,6 +424,9 @@ align-items: center;
 
 <p >संपूर्ण पत्ता लिहा :- <input id="address" type="text"></p></p>
 <div>
+    <p id="mobnopara">whatsapp mob no :- <input id="mobno" type="number"></p></p>
+    <p >re-enter whatsapp mob no :- <button id="mobbtn"><input id="mobnover" type="number"></button></p></button>
+  
 <button  id="secA_btn"  class="button" onclick="secA()">Submit personal information</button>
 
 </div>
@@ -576,6 +579,7 @@ Please select quantity.`)">
 <p class="sec_d_p" id="i1"></p>
 <p class="sec_d_p" id="i2"></p>
 <p class="sec_d_p"  id="i3"></p>
+<p class="sec_d_p_1" id="i16"></p>
 <p class="sec_d_p"  id="i4"></p>
 <p class="sec_d_p"  id="i5"></p>
 <p class="sec_d_p" id="i14"></p>
@@ -616,6 +620,15 @@ var e = document.getElementById("addres_add");
 
 var f = document.getElementById("address");
 var f_one = document.getElementById("secA_btn");
+
+
+var mobno = document.getElementById("mobno");
+var mobnover = document.getElementById("mobnover");
+var mobbtn = document.getElementById("mobbtn")
+mobbtn.addEventListener("click",function () {
+    mobnopara.style.opacity = "0";
+})
+
         
 //section b
 var g = document.getElementById("section_B");
@@ -758,7 +771,11 @@ c_c.innerHTML = `${day}-${month}-${year}`;
     document.getElementById("addres_add").style.backgroundColor = "black"
     window.location.reload()
     }
-
+    else if(mobno.value != mobnover.value){
+alert("mob no is not match please relod the page and order again");
+mobnopara.style.opacity = "1";
+mobnopara.style.backgroundColor = "red";
+}
     
     else{
 d.disabled = true;
@@ -790,7 +807,9 @@ d.disabled = true;
     i.value == "00"){alert(`${d.value} please select  product options; without this information order is not confirmed`)
     i.style.backgroundColor = "black"
  
-    }else{
+    }
+
+    else{
         i.disabled = true
     j.disabled = true;
     k.disabled = true;
@@ -974,6 +993,7 @@ function secC(){
   document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
 document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
 document.getElementById("i14").innerHTML = document.getElementById("para").innerHTML;
+document.getElementById("i16").innerHTML = "whatsapp mob no-" + mobnover.value;
 
 setTimeout(() => {
     alert(`${d.value} 
@@ -1206,12 +1226,12 @@ Orange.addEventListener("click" ,function(){
 
 
 
-  var Other =  document.getElementById("Other");
-Other.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = Other.innerHTML;
-    document.getElementById("col_btn").remove();
-    alert(`${d.value} + c c y` )
-  })
+//   var Other =  document.getElementById("Other");
+// Other.addEventListener("click" ,function(){
+//     document.getElementById("para").innerHTML = Other.innerHTML;
+//     document.getElementById("col_btn").remove();
+//     alert(`${d.value} + c c y` )
+//   })
 
 
 
@@ -1255,6 +1275,12 @@ function gotowhatsapp(){
  var b11 =  document.getElementById("i11").innerHTML ;
  var b12 =  document.getElementById("i12").innerHTML ;
  var b14 =  document.getElementById("i14").innerHTML ;
+ var b15 =  document.getElementById("i16").innerHTML ;
+
+
+
+
+
 if (b2 === "" || b3 === ""||b4 === "") {
     alert("please save again -Personal Details-")
 } else if(b5 === "" || b6 === ""||b7 === ""||b8 === ""||b9 === ""){
@@ -1267,6 +1293,7 @@ if (b2 === "" || b3 === ""||b4 === "") {
     + "ORDER CONFIRM" + "%0a"
     +"*"+ b1 +"*"+ "%0a" + "%0a"
     +"*"+ b2 +"*"+ "%0a" + "%0a"
+    +"*"+ b15 +"*" + "%0a" + "%0a"
     +"*"+ b3 +"*"+ "%0a" + "%0a"
     +"*"+ b4 +"*"+"%0a" + "%0a"
     +"*"+ b5 +"*"+ "%0a" + "%0a"
