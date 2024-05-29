@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -233,6 +234,10 @@ justify-content: center;
 align-items: center;
 display: flex;
 } */
+#spece_no{
+    font-size: 0px;
+    opacity: 0;
+}
 .gpbtn{
         border-radius: 100%;
         width: fit-content;
@@ -399,6 +404,7 @@ align-items: center;
 <body>
 
 <div >
+    <p id="spece_no">oooooo</p>
     <div class="name"> सह्याद्री  कलेक्शन</div>
     <div id="first_para">
         <p id="op"></p>
@@ -625,6 +631,9 @@ var f_one = document.getElementById("secA_btn");
 var mobno = document.getElementById("mobno");
 var mobnover = document.getElementById("mobnover");
 var mobbtn = document.getElementById("mobbtn")
+
+const str = document.getElementById("mobnover").value; 
+
 mobbtn.addEventListener("click",function () {
     mobnopara.style.opacity = "0";
 })
@@ -741,6 +750,17 @@ c_c.innerHTML = `${day}-${month}-${year}`;
 
 
    function secA(){
+
+    var str = document.getElementById("mobnover").value
+ var n_1 = str.slice(0,2); 
+ var n_2 = str.slice(2,4);
+ var n_3 = str.slice(4,6);
+ var n_4 = str.slice(6,8);
+ var n_5 = str.slice(8,10);
+ document.getElementById("spece_no").innerHTML = n_1+"--"+n_2+"--"+n_3+"--"+n_4+"--"+n_5;
+
+
+
      
     if ( d.value == ``|| null) {
     alert(`${"ptriy grahak"} please enter name; without this information order is not confirmed `)
@@ -993,7 +1013,7 @@ function secC(){
   document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
 document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
 document.getElementById("i14").innerHTML = document.getElementById("para").innerHTML;
-document.getElementById("i16").innerHTML = "whatsapp mob no-" + mobnover.value;
+document.getElementById("i16").innerHTML = "whatsapp mob no-" +  document.getElementById("spece_no").innerHTML;
 
 setTimeout(() => {
     alert(`${d.value} 
