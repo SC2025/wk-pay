@@ -795,8 +795,9 @@ c_c.innerHTML = `${day}-${month}-${year}`;
 alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
 mobnopara.style.opacity = "1";
 mobnopara.style.backgroundColor = "red";
-}
-    
+document.getElementById("sec_b").remove();
+
+}   
     else{
 d.disabled = true;
     e.disabled = true
@@ -884,7 +885,7 @@ m.innerHTML = `Product name :-${name_product_name}`
 
     //total price of selected product
     var price =  productrs * product_quantity;
-   q.innerHTML = ` Total ${product_quantity} product price ${price} RS`;
+   q.innerHTML = `Total ${product_quantity} product price ${price} RS`;
    p.innerHTML = `productget discount* :- 20 %`
 
 //    //transaction id
@@ -1318,7 +1319,7 @@ if (b2 === "" || b3 === ""||b4 === "") {
     +"*"+ b4 +"*"+"%0a" + "%0a"
     +"*"+ b5 +"*"+ "%0a" + "%0a"
     +"*"+ b14 +"*"+"%0a" + "%0a"
-    +"*"+ b6  +"*"+"%0a" + "%0a"
+    +"*"+ b6 +"*"+"%0a" + "%0a"
     +"*"+ b7 +"*"+ "%0a" + "%0a"
     +"*"+ b8 +"*"+ "%0a" + "%0a"
     +"*"+ b9 +"*"+ "%0a" + "%0a"
