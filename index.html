@@ -350,7 +350,9 @@ color: aliceblue;
     height: fit-content;
     width: fit-content;
     font-weight: 1000;
-    background-color: #FF69B4;
+  
+    border: 2px red;
+    margin: 3px;
 }
 
 #black{
@@ -540,9 +542,10 @@ Please select quantity.`)">
         scrollamount = "3">
         <div id="leg_hed"></div>
         </marquee>
-<div class="col_bor">
+        <div id="select_col1">
+            <div class="col_bor">
         <div>
-            <p class="col_bor">select colour 1st colour</p>
+            <p class="col_bor">select 1st colour</p>
 <select name="" id="col_first"  onchange="alert(`${document.getElementById(`name`).value} 
 तुम्ही 
 1st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
@@ -579,7 +582,9 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
    
 </select>
 </div>
+</div>
 
+<div class="select_col2">
 <div>
     <p class="col_bor">select 2nd colour</p>
     <select name="" id="col_second"  onchange="alert(`${document.getElementById(`name`).value} 
@@ -622,6 +627,8 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 
 </div>
 </div>
+
+
 <div class="a">
     <div class="col_div" id="black" > black</div>
     <div class="col_div" id="white" > white</div>
@@ -661,6 +668,9 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
     
        
 </div>
+
+
+
 </div>
 
 <p id="para1"></p>
@@ -1076,7 +1086,17 @@ if ( leg_par_opp  == "Petticoat" ) {
 };  
 
 
+setInterval(() => {
+    document.getElementById("select_col1").style.backgroundColor = "red"
+    document.getElementById("select_col2").style.backgroundColor = "red"
 
+}, 1000);
+
+setInterval(() => {
+    document.getElementById("select_col1").style.backgroundColor = "blue"
+    document.getElementById("select_col2").style.backgroundColor = "blue"
+
+}, 2000);
 
 // if ( leg_par_opp  == "leggeing" ) {
 //     document.getElementById("leg_par").style.opacity = 1;
