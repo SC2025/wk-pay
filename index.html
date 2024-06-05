@@ -441,9 +441,7 @@ color: aliceblue;
         }
 
 
-#col_div_width{
-    width: 50%;
-}
+
 
 
 </style>
@@ -587,7 +585,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </div>
 </div>
 
-<div class="select_col2">
+<div id="select_col2">
 <div>
     <p class="col_bor">select 2nd colour</p>
     <select name="" id="col_second"  onchange="alert(`${document.getElementById(`name`).value} 
@@ -631,7 +629,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </div>
 </div>
 
-<div id="col_div_width">
+
 <div class="a">
     <div class="col_div" id="black" > black</div>
     <div class="col_div" id="white" > white</div>
@@ -664,7 +662,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
     <div class="col_div" id="yellow"  > yellow </div>
     <div class="col_div" id="marron"  > marron </div>
 </div>
-</div>
+
 
 
 
@@ -1090,15 +1088,12 @@ if ( leg_par_opp  == "Petticoat" ) {
 
 
 setInterval(() => {
-    document.getElementById("select_col1").style.backgroundColor = "rgb(194, 154, 154);"
-    document.getElementById("select_col2").style.backgroundColor = "aquamarine"
-
+    document.getElementById("select_col1").style.backgroundColor = "rgb(152, 232, 232)";
+    document.getElementById("select_col2").style.backgroundColor = "rgb(152, 232, 232)";
 }, 1000);
-
 setInterval(() => {
-    document.getElementById("select_col2").style.backgroundColor = "rgb(194, 154, 154);"
-    document.getElementById("select_col2").style.backgroundColor = "aquamarine"
-
+    document.getElementById("select_col1").style.backgroundColor = "rgb(152, 232, 232)";
+    document.getElementById("select_col2").style.backgroundColor = "rgb(152, 232, 232)";  
 }, 2000);
 
 // if ( leg_par_opp  == "leggeing" ) {
