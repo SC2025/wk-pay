@@ -331,6 +331,10 @@ color: aliceblue;
     width: fit-content;
     font-size: 15px;
 }
+.col_div{
+    height: 5%;
+    width: 5%;
+}
 
 #black{
     color: aliceblue;
@@ -342,7 +346,7 @@ color: aliceblue;
     background-color: rgb(255, 255, 255);
 }
 #red{
-    background-color: rgb(239, 91, 91);
+    background-color: rgb(246, 103, 103);
     color: #ffffff;
 }
 #d_red{
@@ -357,7 +361,8 @@ color: aliceblue;
     color: #ffffff;
 }
 #blue{
-    background-color: rgb(89, 0, 255);
+    background-color: rgb(110, 52, 217);
+    color: #ffffff;
 }
 #d_blue{
     background-color: rgb(55, 0, 255);
@@ -367,7 +372,7 @@ color: aliceblue;
     background-color: #d9d8b9;
 }
 #d_cream{
-    background-color: #eee876;
+    background-color: #e9e483;
 }
 #sky{
    background-color: rgb(110, 202, 232);
@@ -392,7 +397,29 @@ color: aliceblue;
     color: #ffffff;}
 
 
-
+    .col_div{
+            border: 1px solid black;
+            height: 5vh;
+            width: 40%;
+            margin-left: 2px;
+        margin-right: 2px;
+        padding: 1px;
+     
+            align-items: center;
+        justify-content: center;
+        text-align: center;
+           
+        }
+        .a{
+            display: flex;
+            align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight:500 ;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 1px;
+        }
 
 
 
@@ -496,38 +523,129 @@ Please select quantity.`)">
         scrollamount = "3">
         <div id="leg_hed"></div>
         </marquee>
-
-
-        <button id="black" value="">colour black</button>
-        <button id="white" value="">colour white</button>
-        <button id="red"  value="">colour red</button>
-        <button id="d_red"  value="">colour dark red</button>
-        <button id="pink"  value="">colour pink</button>
-        <button id="d_pink"  value="">colour dark pink</button>
-        <button id="blue"  value="">colour blue</button>
-        <button id="d_blue"  value="">colour dark blue</button>
-        <button id="cream"  value="">colour cream colour</button>
-        <button id="d_cream"  value="">dark cream clour</button>
-        <button id="sky"  value="">colour sky blue</button>
-        <button id="d_sky"  value="">colour dark sky </button>
+        <div>
+            <p>select colour 1st </p>
+<select name="" id="col_first"  onchange="alert(`${document.getElementById(`name`).value} 
+तुम्ही 
+1st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
+${this.options[this.selectedIndex].text}  निवडा आहे.
+Please select 2nd ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} colour.`)">
+       <option value="">BLACK colour</option>
+      <option value="">WHITE  colour</option>
+  
+      <option value="">RED  colour</option>
+      <option value="">dark RED colour</option>
+  
+       
+      <option value="">NAVY BLUE colour</option>
+      <option value="">ORANGE colour</option>
+  
+      <option value="">GREEN colour</option>
+      <option value="">SKIN colour</option>
+  
+      <option value="">PINK  colour</option>
+      <option value="">dark PINK colour</option>
+  
+      <option value="">BLUE colour</option>
+      <option value="">dark BLUE colour</option>
+  
+      <option value="">CREAM colour</option>
+      <option value="">dark CREAM colour</option>
+  
+      <option value="">SKY BLUE colour</option>
+      <option value="">dark SKY BLUE colour</option>
+  
       
+      <option value="">YELLOW colour</option>
+      <option value="">MARRON colour</option>
+   
+</select>
+</div>
 
-        <button id="yellow"  value="">colour yellow </button>
-        <button id="marron"  value="">colour marron </button>
-        <button id="green"  value="">colour green</button>
-        <button id="skin"  value="">colour skin </button>
-        <button id="navy_blue"  value="">colour navy blue </button>
-        <button id="orange"  value="">Orange </button>
+<div>
+    <p>select colour 2st</p>
+    <select name="" id="col_second"  onchange="alert(`${document.getElementById(`name`).value} 
+    तुम्ही 
+    2st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
+    ${this.options[this.selectedIndex].text} निवडा आहे.
+`)">
+      <option value="">WHITE  colour</option>
+    <option value="">BLACK colour</option>
+
+    <option value="">RED  colour</option>
+    <option value="">dark RED colour</option>
+
+     
+    <option value="">NAVY BLUE colour</option>
+    <option value="">ORANGE colour</option>
+
+    <option value="">GREEN colour</option>
+    <option value="">SKIN colour</option>
+
+    <option value="">PINK  colour</option>
+    <option value="">dark PINK colour</option>
+
+    <option value="">BLUE colour</option>
+    <option value="">dark BLUE colour</option>
+
+    <option value="">CREAM colour</option>
+    <option value="">dark CREAM colour</option>
+
+    <option value="">SKY BLUE colour</option>
+    <option value="">dark SKY BLUE colour</option>
+
+    
+    <option value="">YELLOW colour</option>
+    <option value="">MARRON colour</option>
+
+    
+ 
+</select>
+
+</div>
+
+<div class="a">
+    <div class="col_div" id="black" > black</div>
+    <div class="col_div" id="white" > white</div>
+    <div class="col_div" id="red"  > red </div>
+    <div class="col_div" id="d_red"  > dark red </div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="navy_blue"  > navy blue </div>
+    <div class="col_div" id="orange"  >Orange </div>
+    <div class="col_div" id="green"  > green </div>
+    <div class="col_div" id="skin"  > skin </div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="pink"  > pink </div>
+    <div class="col_div" id="d_pink"  > dark pink </div>
+    <div class="col_div" id="blue"  > blue </div>
+    <div class="col_div" id="d_blue"  > dark blue</div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="cream"  > cream </div>
+    <div class="col_div" id="d_cream"  >dark cream </div>
+    <div class="col_div" id="sky"  > sky blue </div>
+    <div class="col_div" id="d_sky"  > dark sky blue </div>
+</div>
+    
+    <div class="a">
+    <div class="col_div" id="yellow"  > yellow </div>
+    <div class="col_div" id="marron"  > marron </div>
+</div>
 
 
 
-        <button id="Other"  value="">colour Other</button>
+
     
        
 </div>
 </div>
-<p id="para"></p>
-
+<p id="para1"></p>
+<p id="para2"></p>
 <h3><p id="product_discount"></p></h3>
 <h3><p id="product_price-print"></p></h3>
 <h3><p id="product_quantity-print"></p></h3>
@@ -562,7 +680,7 @@ Please select quantity.`)">
 </div> 
 
  <p  id="id_input" class="big_font">Enter UPI transactiion id last 4 digit
-    <input  id="transaction_id" value="" type="text">
+    <input  id="transaction_id" value="" type="number">
 </p>
 <BUtton class="button"  onclick="secC()">preview And Submit Payment data </BUtton>
 </div> 
@@ -794,12 +912,22 @@ c_c.innerHTML = `${day}-${month}-${year}`;
     window.location.reload()
     }
     else if(mobno.value != mobnover.value){
-alert("तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा");
+alert(`${d.value} 
+ तुमचा मोबाईल नंबर मॅच होत नाही, कृपया पेज रिलोड करा आणि माहिती पुन्हा भरा`);
 mobnopara.style.opacity = "1";
 mobnopara.style.backgroundColor = "red";
 document.getElementById("sec_b").remove();
-
 }   
+else if (mobno.value.length != 10) {
+    alert(`${d.value} तुम्ही
+    10 अंकी मोबाईल नंबर एंटर करा 
+    तुम्ही ${mobno.value.length} अंकी मोबाईल नंबर लिहित आहात 
+    कृपया मोबाईल नंबर तपासा`);
+    mobnopara.style.opacity = "1";
+mobnopara.style.backgroundColor = "red";
+document.getElementById("sec_b").remove();
+   
+}
     else{
 d.disabled = true;
     e.disabled = true
@@ -921,50 +1049,11 @@ var select = i;
 
 if ( leg_par_opp  == "Petticoat" ) {
     document.getElementById("leg_par").style.opacity = 1;
-    Orange.disabled = false;
-  navy_blue.disabled = false;
-                  skin.disabled = false;
-                green.disabled = false;
-              marron.disabled = false;
-            yellow.disabled = false;
-          d_skycol.disabled = false;
-  skycol.disabled = false;
-  d_creamcol.disabled = false;
-  creamcol.disabled = false;
-  d_bluecol.disabled = false;
-  bluecol.disabled = false;
-  d_pinkcol.disabled = false;
-  pinkcol.disabled = false;
-  d_redcol.disabled = false;
-  redcol.disabled = false;
-  whitecol.disabled = false;
-  blackcol.disabled = false;
-  Other.disabled = false;
-  
 }else if ( leg_par_opp  == "leggeing" ) {
     document.getElementById("leg_par").style.opacity = 1;
-    Orange.disabled = false;
-  navy_blue.disabled = false;
-                  skin.disabled = false;
-                green.disabled = false;
-              marron.disabled = false;
-            yellow.disabled = false;
-          d_skycol.disabled = false;
-  skycol.disabled = false;
-  d_creamcol.disabled = false;
-  creamcol.disabled = false;
-  d_bluecol.disabled = false;
-  bluecol.disabled = false;
-  d_pinkcol.disabled = false;
-  pinkcol.disabled = false;
-  d_redcol.disabled = false;
-  redcol.disabled = false;
-  whitecol.disabled = false;
-  blackcol.disabled = false;
-  Other.disabled = false;}
+}
  else {
     document.getElementById("leg_par").remove();
-   
 };  
 
 
@@ -989,15 +1078,23 @@ if ( leg_par_opp  == "Petticoat" ) {
    
 
 function secC(){
- 
+    var selcol = document.getElementById("col_first");
+    var selfc = selcol.options[selcol.selectedIndex].text ; //returns the entire select with all the options
+
+    var selcol2 = document.getElementById("col_second");
+    var selsc = selcol2.options[selcol2.selectedIndex].text ; //returns the entire select with all the options
     //id if elese
  if(s.value == "")
  {
-    alert(`${d.value}Please enter UPI Transaction id ;
+    alert(`${d.value}Please enter last 4 digit UPI Transaction id ;
     without this information Order is not confirmed.`);
     s.style.backgroundColor = "red";
     secB()
-  }else{
+  } else if(s.value.length != 4){
+alert(`${d.value}pleas enter valid last 4 digit UPI Transaction you enter ${s.value.length} digit`)
+  }
+  
+  else{
    t.style.opacity = 1;
    l.style.opacity = 0.2;
   
@@ -1015,7 +1112,8 @@ function secC(){
   document.getElementById("i12").innerHTML = `order delivery before ${c_c.innerHTML}`;
   document.getElementById("i11").innerHTML = `UPI transaction ID :- XXXXXXXX${s.value}`;
 document.getElementById("secD_heding").innerHTML = `- ${d.value} your order summary click to final submit-`;
-document.getElementById("i14").innerHTML = document.getElementById("para").innerHTML;
+document.getElementById("i14").innerHTML = `colour :-${selfc} and ${selsc}`
+console.log(i14.innerHTML)
 document.getElementById("i16").innerHTML = "whatsapp mob no-" +  document.getElementById("spece_no").innerHTML;
 
 setTimeout(() => {
@@ -1028,6 +1126,8 @@ setTimeout(() => {
 secA_div.remove();
 g.remove();
 l.remove();
+
+
 
 
 
@@ -1049,238 +1149,18 @@ l.remove();
 }}
 
 
-var blackcol =  document.getElementById("black");
-blackcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = blackcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select black colour 
-    QR कोड स्कॅन करून पेमेंट करा. ` )
-  })
 
 
-  var whitecol =  document.getElementById("white");
-whitecol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = whitecol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select white colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
 
 
-  var redcol =  document.getElementById("red");
-redcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = redcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select red colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
 
 
 
-  var d_redcol =  document.getElementById("d_red");
-d_redcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = d_redcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select dark red colour
-    QR कोड स्कॅन करून पेमेंट करा. ` )
-  })
 
 
 
 
 
-  var pinkcol =  document.getElementById("pink");
-pinkcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = pinkcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select pink colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-
-
-
-
-
-  var d_pinkcol =  document.getElementById("d_pink");
-d_pinkcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = d_pinkcol.innerHTML;
-    document.getElementById("col_btn").remove();
-    alert(`${d.value} you select dark pink colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-
-
-
-  var bluecol =  document.getElementById("blue");
-bluecol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = bluecol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select blue colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-  var d_bluecol =  document.getElementById("d_blue");
-d_bluecol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = d_bluecol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select dark blue colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-
-  var creamcol =  document.getElementById("cream");
-creamcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = creamcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value}  you select cream colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-
-  var d_creamcol =  document.getElementById("d_cream");
-d_creamcol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = d_creamcol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select dark crean colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-  var skycol =  document.getElementById("sky");
-skycol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = skycol.innerHTML;
-    document.getElementById("col_btn").remove()
-    alert(`${d.value} you select sky blue colour
-    QR कोड स्कॅन करून पेमेंट करा.` )
-  })
-
-
-  var d_skycol =  document.getElementById("d_sky");
-d_skycol.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = d_skycol.innerHTML;
-    document.getElementById("col_btn").remove();
-    alert(`${d.value} you select dark sky blue colour
-    QR कोड स्कॅन करून पेमेंट करा.
-    ` )
-  })
-
-
-  var yellow =  document.getElementById("yellow");
-        yellow.addEventListener("click" ,function(){
-            document.getElementById("para").innerHTML = yellow.innerHTML;
-            document.getElementById("col_btn").remove();
-            alert(`${d.value} you select yellow colour
-            QR कोड स्कॅन करून पेमेंट करा.
-            ` )
-          })
-  
-
-          var marron =  document.getElementById("marron");
-          marron.addEventListener("click" ,function(){
-              document.getElementById("para").innerHTML = marron.innerHTML;
-              document.getElementById("col_btn").remove();
-              alert(`${d.value} you select marron colour
-              QR कोड स्कॅन करून पेमेंट करा.
-              ` )
-            })
-   
-
-
-
-            var green =  document.getElementById("green");
-            green.addEventListener("click" ,function(){
-                document.getElementById("para").innerHTML = green.innerHTML;
-                document.getElementById("col_btn").remove();
-                alert(`${d.value} you select green colour
-                QR कोड स्कॅन करून पेमेंट करा.
-                ` )
-              });
-         
-
-
-
-
-              var skin =  document.getElementById("skin");
-              skin.addEventListener("click" ,function(){
-                  document.getElementById("para").innerHTML = skin.innerHTML;
-                  document.getElementById("col_btn").remove();
-                  alert(`${d.value} you select skin colour
-                  QR कोड स्कॅन करून पेमेंट करा.
-                  ` )
-                });
-       
-
-
-
-                var navy_blue =  document.getElementById("navy_blue");
-                navy_blue.addEventListener("click" ,function(){
-                    document.getElementById("para").innerHTML = navy_blue.innerHTML;
-                    document.getElementById("col_btn").remove();
-                    alert(`${d.value} you select navy blue colour
-                    QR कोड स्कॅन करून पेमेंट करा.
-                    ` )
-                  })
-
-
-
-           
-
-
-
-                 var Orange =  document.getElementById("orange");
-Orange.addEventListener("click" ,function(){
-    document.getElementById("para").innerHTML = Orange.innerHTML;
-    document.getElementById("col_btn").remove();
-    alert(`${d.value} you select Orange colour
-    QR कोड स्कॅन करून पेमेंट करा.
-    ` )
-  });
-
-
-
-  
-
-
-
-//   var Other =  document.getElementById("Other");
-// Other.addEventListener("click" ,function(){
-//     document.getElementById("para").innerHTML = Other.innerHTML;
-//     document.getElementById("col_btn").remove();
-//     alert(`${d.value} + c c y` )
-//   })
-
-
-
-
-
-
-
-  Orange.disabled = true;
-  navy_blue.disabled = true;
-                  skin.disabled = true;
-                green.disabled = true;
-              marron.disabled = true;
-            yellow.disabled = true;
-          d_skycol.disabled = true;
-  skycol.disabled = true;
-  d_creamcol.disabled = true;
-  creamcol.disabled = true;
-  d_bluecol.disabled = true;
-  bluecol.disabled = true;
-  d_pinkcol.disabled = true;
-  pinkcol.disabled = true;
-  d_redcol.disabled = true;
-  redcol.disabled = true;
-  whitecol.disabled = true;
-  blackcol.disabled = true;
-  Other.disabled = true;
 
 
 
