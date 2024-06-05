@@ -50,9 +50,7 @@ border: 2PX solid;
 opacity: 0;
 padding: 10px;
 height: 30%;
-
 gap: 50px;
-
 font-size: 20px;
 font-weight: 1000;
 }
@@ -247,12 +245,22 @@ width: fit-content;
 border: 1px solid black;
 }
 
-
-#col_btn>button{
-
+#col_first,#col_second{
+    font-weight:1000 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3px;
+}
+#clo_div{
+    border: 2px black;
+    background-color: #5783db;
+}
+#col_btn{
     font: inherit;
     height: fit-content;
-    width: 45%;
+    width: 98vh;
     font-size: small;
     padding: 0.5%;
     border-radius: 10%;
@@ -267,6 +275,7 @@ border: 1px solid black;
 
 
 #leg_par{
+width:fit-content;
     padding: 10 px;
     font-size: 15px;
     width: fit-content;
@@ -331,9 +340,17 @@ color: aliceblue;
     width: fit-content;
     font-size: 15px;
 }
-.col_div{
-    height: 5%;
-    width: 5%;
+.col_bor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px black;
+    padding: 4px;
+    height: fit-content;
+    width: fit-content;
+    font-weight: 1000;
+    background-color: #FF69B4;
 }
 
 #black{
@@ -411,6 +428,7 @@ color: aliceblue;
            
         }
         .a{
+            width: 200%;
             display: flex;
             align-items: center;
         justify-content: center;
@@ -523,8 +541,9 @@ Please select quantity.`)">
         scrollamount = "3">
         <div id="leg_hed"></div>
         </marquee>
+<div class="col_bor">
         <div>
-            <p>select colour 1st </p>
+            <p class="col_bor">select colour 1st colour</p>
 <select name="" id="col_first"  onchange="alert(`${document.getElementById(`name`).value} 
 तुम्ही 
 1st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
@@ -563,7 +582,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </div>
 
 <div>
-    <p>select colour 2st</p>
+    <p class="col_bor">select 2nd colour</p>
     <select name="" id="col_second"  onchange="alert(`${document.getElementById(`name`).value} 
     तुम्ही 
     2st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
@@ -603,7 +622,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </select>
 
 </div>
-
+</div>
 <div class="a">
     <div class="col_div" id="black" > black</div>
     <div class="col_div" id="white" > white</div>
@@ -644,6 +663,7 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
        
 </div>
 </div>
+
 <p id="para1"></p>
 <p id="para2"></p>
 <h3><p id="product_discount"></p></h3>
@@ -919,7 +939,7 @@ mobnopara.style.backgroundColor = "red";
 document.getElementById("sec_b").remove();
 }   
 else if (mobno.value.length != 10) {
-    alert(`${d.value} तुम्ही
+    alert(`${d.value} 
     10 अंकी मोबाईल नंबर एंटर करा 
     तुम्ही ${mobno.value.length} अंकी मोबाईल नंबर लिहित आहात 
     कृपया मोबाईल नंबर तपासा`);
