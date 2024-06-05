@@ -350,8 +350,7 @@ color: aliceblue;
     height: fit-content;
     width: fit-content;
     font-weight: 1000;
-  
-    border: 2px red;
+    border: 2px solid rgb(7, 0, 0);
     margin: 3px;
 }
 
@@ -544,8 +543,8 @@ Please select quantity.`)">
         </marquee>
         <div id="select_col1">
             <div class="col_bor">
-        <div>
-            <p class="col_bor">select 1st colour</p>
+    
+            <p >select 1st colour</p>
 <select name="" id="col_first"  onchange="alert(`${document.getElementById(`name`).value} 
 तुम्ही 
 1st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
@@ -586,8 +585,9 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </div>
 
 <div id="select_col2">
-<div>
-    <p class="col_bor">select 2nd colour</p>
+
+    <div class="col_bor">
+    <p >select 2nd colour</p>
     <select name="" id="col_second"  onchange="alert(`${document.getElementById(`name`).value} 
     तुम्ही 
     2st ${document.getElementById(`product-name`).options[document.getElementById(`product-name`).selectedIndex].text} 
@@ -627,8 +627,8 @@ Please select 2nd ${document.getElementById(`product-name`).options[document.get
 </select>
 
 </div>
-</div>
 
+</div>
 
 <div class="a">
     <div class="col_div" id="black" > black</div>
@@ -1088,12 +1088,14 @@ if ( leg_par_opp  == "Petticoat" ) {
 
 
 setInterval(() => {
+    setTimeout(() => {
     document.getElementById("select_col1").style.backgroundColor = "rgb(152, 232, 232)";
-    document.getElementById("select_col2").style.backgroundColor = "rgb(230, 126, 134)";
+    document.getElementById("select_col2").style.backgroundColor = "rgb(152, 232, 232)";
 }, 1000);
-setInterval(() => {
-    document.getElementById("select_col1").style.backgroundColor = "rgb(152, 232, 232)";
+setTimeout(() => {
+    document.getElementById("select_col1").style.backgroundColor ="rgb(230, 126, 134)"; 
     document.getElementById("select_col2").style.backgroundColor = "rgb(230, 126, 134)";  
+}, 2000);
 }, 2000);
 
 // if ( leg_par_opp  == "leggeing" ) {
