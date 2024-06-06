@@ -980,24 +980,42 @@ c_c.innerHTML = `${day}-${month}-${year}`;
     document.getElementById("addres_add").style.backgroundColor = "black"
     window.location.reload()
     }
-    else if(mobno.value != mobnover.value){
+        else if(mobno.value != mobnover.value){
 alert(`${d.value} 
  तुमचा मोबाईल नंबर मॅच होत नाही, कृपया माहिती पुन्हा भरा`);
 mobnopara.style.opacity = "1";
 mobnopara.style.backgroundColor = "red";
-document.getElementById("sec_b").remove();
+
+setTimeout(() => {
+    alert(`${d.value} 
+    तुमचा मोबाईल नंबर मॅच होत नाही; 
+    ${mobno.value} and ${mobnover.value}
+    @ page is relode`);
+    window.location.reload()
+},3000);
+
 }   
 else if (mobno.value.length != 10) {
-    alert(`${d.value} 
+    alert(`${d.value} तुम्ही
     10 अंकी मोबाईल नंबर एंटर करा 
     तुम्ही ${mobno.value.length} अंकी मोबाईल नंबर लिहित आहात 
     कृपया मोबाईल नंबर तपासा`);
     mobnopara.style.opacity = "1";
 mobnopara.style.backgroundColor = "red";
-document.getElementById("sec_b").remove();
-   
+
+setTimeout(() => {
+    alert(`${d.value}
+    तुमचा ${mobno.value.length} अंकी मोबाईल नंबर नंबर मॅच होत नाही; 
+   ${mobno.value} and ${mobnover.value}
+    @ page is relode`);
+
+    window.location.reload()
+
+},3000);
+
+
 }
-    else{
+    else{ 
 d.disabled = true;
     e.disabled = true
     f.disabled = true;
@@ -1010,7 +1028,7 @@ d.disabled = true;
     secA_div.style.opacity = 0.2;
     g.style.opacity = 1;
     h.innerHTML = `-- ${d.value} select product options --`
-
+    document.getElementById("sec_b").sytle.opacity= 1;
 
   
 
